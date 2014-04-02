@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="template">
+	<name>Clínica Dávila</name>
+	<version>1.0.0</version>
+	<creationDate>22/07/2010</creationDate>
+	<author>Diseño Objetivo</author>
+	<authorEmail>info@do.cl</authorEmail>
+	<authorUrl>http://www.do.cl</authorUrl>
+	<copyright>Clínica Dávila</copyright>
+	<license>GNU/GPL version 2</license>
+	<description>Template Intranet Clínica Dávila</description>
+	
+	<positions>
+		<position>encabezado</position>
+		<position>encabezado_home</position>
+		<position>encabezado_cotenido</position>
+		
+		<position>multibanner</position>
+		<position>boxsdestacadas</position>
+		<position>preguntasfrecuentes</position>
+		<position>boxshome</position>
+		<position>chat</position>
+		<position>pie</position>
+		<position>derecha</position>
+		<position>inferior</position>
+		<position>inferior_contenido</position>
+		
+		<position>debug</position>
+		
+		<position>mod_pie</position>
+	</positions>
+
+</install>

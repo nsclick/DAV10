@@ -1,0 +1,45 @@
+/**
+ * @version		$Id: template_ie6.css 2010-07-22 sgarcia $
+ * @package		Joomla
+ * @subpackage	DO
+ * @autor		Diseño Objetivo www.do.cl
+ * @copyright	Copyright (C) 2006 - 2010 Diseño Objetivo. Todos los derechos reservados.
+ * @license		LICENCIA_DO.php
+ */
+
+	/**************************************/
+	/*                                    */
+	/*          Diseño Objetivo           */
+	/*       www.do.cl / info@do.cl       */
+	/*      Fono: (56-02) 228 13 91       */
+	/*                                    */
+	/**************************************/
+
+
+table.encabezado td.menu_principal		{ padding-top:27px; }
+table.encabezado td.menu_superior		{ color:#CCC; font-size:11px; }
+
+div.box_contenido_main		{ background-color:#FFF; width:1020px; padding:16px 38px; overflow:hidden; }
+
+div.mod_categorias			{ width:710px; overflow:hidden; }
+div.mod_categorias div.articulos	{ width:690px; }
+
+.menu_principal							{ overflow:hidden; width:auto; }
+
+div.box_descripcion			{ width:710px; }
+
+div.itemsgal div.itemizq table.itemsgal td.titulo	{ padding-top:10px; }
+
+div.categoria div.items div.item div.introtext p	{ margin:0px; }
+
+div.mod_personas					{ height:230px; }
+div.mod_personas div.form			{ height:161px; }
+
+div.mod_cumple div.lista			 { width:284px; }
+
+div.frmcontacto	div.fondo			{ width:710px; }
+
+div.chat div.listado				{ height:256px; }
+div.chat div.buscador				{ height:24px; }
+
+.chatboxcontent						{ width:225px; }

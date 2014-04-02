@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="content">
+	<name>Clínica Dávila</name>
+	<author>Diseño Objetivo</author>
+	<creationDate>Julio 2010</creationDate>
+	<copyright>Copyright (C) 2006 - 2010 Diseño Objetivo. Todos los derechos reservados.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@do.cl</authorEmail>
+	<authorUrl>www.do.cl</authorUrl>
+	<version>1.0</version>
+	<description>
+	Plugin de Clínica Dávila
+	{do t:formulario|form:cursos}
+	</description>
+	<files>
+		<filename plugin="do">do.php</filename>
+	</files>
+	<params/>
+</install>

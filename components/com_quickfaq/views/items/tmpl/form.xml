@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="FAQ ITEM SUBMISSION">
+		<message>
+			<![CDATA[FAQ ITEM SUBMISSION TIP]]>
+		</message>
+	</layout>
+	<state>
+		<name>FAQ ITEM SUBMISSION</name>
+		<description>FAQ ITEM SUBMISSION DESC</description>
+		<params>
+		</params>
+	</state>
+</metadata>

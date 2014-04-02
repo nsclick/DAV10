@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+
+	<name>Cajas Destacadas</name>
+	<author>Diseño Objetivo</author>
+	<creationDate>Julio 2010</creationDate>
+	<copyright>Clínica Dávila. Todos los derechos reservados.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@do.cl</authorEmail>
+	<authorUrl>http://www.do.cl</authorUrl>
+	<version>1.0.0</version>
+	<description>Muestra una caja destacada en el home del sitio</description>
+	<files>
+		<filename module="mod_boxs_destacadas">mod_boxs_destacadas.php</filename>
+	</files>
+	<params>
+		<param name="menu" type="menuitem" default="" label="Menú" description="Menú de la caja" />
+		<param name="titulo" type="text" default="" size="50" label="Título" description="Título de la caja" />
+		<param name="icono" type="imagelist" default="" directory="images/boxs" label="Ícono" description="Ícono del título de la caja" />
+		<param name="descripcion" type="textarea" default="" cols="60" rows="8" label="Descripción" description="Texto que va en la descripción de la caja" />
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="vermas" type="radio" default="0" label="Link Ver más" description="Tipo de Link del Ver más">
+			<option value="0">Texto</option>
+			<option value="1">Imagen</option>
+		</param>
+		<param name="margen" type="radio" default="1" label="Margen Izquierdo" description="Aplica un margen izquierdo de 2px">
+			<option value="0">No</option>
+			<option value="1">Si</option>
+		</param>
+		<param name="autoconsulta" type="radio" default="0" label="Autoconsulta" description="Seleccione si este módulo es el Autoconsulta">
+			<option value="0">No</option>
+			<option value="1">Si</option>
+		</param>
+		<param name="autoconsulta_offline" type="textarea" default="" cols="60" rows="8" label="Descripción Autoconsulta (desactivado)" description="Texto que va en la descripción de la caja, cuando la autoconsulta está desactivada" />
+	</params>
+</install>

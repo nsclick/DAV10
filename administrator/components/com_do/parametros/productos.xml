@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+ <params addpath="/administrator/components/com_do/parametros">
+ 	<param name="mostrar_precio" type="radio" default="0" label="Mostrar Precio" description="Mostrar el precio de este producto">
+		<option value="0">No</option>
+		<option value="1">Si</option>
+	</param>
+ 	<param name="calidad" type="list" campo="calidad" label="Calidad" default="" description="Calidad del Fardo">
+		<option value="Premium">Premium</option>
+		<option value="Primera">Primera</option>
+		<option value="Segunda">Segunda</option>
+		<option value="Sale">Sale</option>
+	</param>
+	<param name="peso" type="text" campo="peso" label="Peso (Kg)" default="" description="Peso del cargamento en Kg." />
+	<param name="cantidad" type="text" label="Cantidad" default="" description="Cantidad de prendas aprox. del Fardo" />
+	<param name="@spacer" type="spacer" default="" label="" description="" />
+	<param name="origen" type="text" size="50" label="Origen del producto" default="" description="El cargo del cliente, en su Empresa" />
+	<param name="tipo" type="seleccionable" campo="tipo_producto" label="Tipo Producto" default="" description="Tipo del Producto" />
+	<param name="contenidocomentario" size="100" type="text" label="Comentario Contenido" default="" description="Un comentario acerca del contenido" />
+ </params>
+</config>

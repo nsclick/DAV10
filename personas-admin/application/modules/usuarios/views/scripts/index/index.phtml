@@ -1,0 +1,68 @@
+<div class="widget-box">
+	<div class="widget-title">
+		<h5>Listado de usuarios</h5>
+	</div>
+	<div class="widget-content nopadding">
+		<?php if(isset($this->msj)) { ?>
+			<div class="alert alert-success">
+				<button class="close" data-dismiss="alert">×</button>
+				<strong>Éxito</strong> <?php echo $this->msj ?>
+			</div>
+		<?php } else if(isset($this->err)) { ?>
+			<div class="alert alert-error">
+				<button class="close" data-dismiss="alert">×</button>
+				<strong>Error</strong> <?php echo $this->err ?>
+			</div>
+		<?php } else if(isset($this->adv)) { ?>
+			<div class="alert">
+				<button class="close" data-dismiss="alert">×</button>
+				<strong>Advertencia</strong> <?php echo $this->adv ?>
+			</div>
+		<?php } ?>
+		<table class="table table-bordered data-table">
+			<thead>
+				<tr>
+					<th>Nombre</th>
+					<th>Email</th>
+					<th>Nombre de usuario</th>					
+					<th>Tipo</th>					
+					<th>Estado</th>					
+					<th>Acciones</th>					
+				</tr>
+			</thead>
+			<tbody>
+				<?php foreach($this->usuarios as $usuario) { ?>
+					<tr class="gradeX">
+						<td><?php echo $usuario->nombre ?></td>
+						<td><?php echo $usuario->email ?></td>
+						<td><?php echo $usuario->nombre_usuario ?></td>
+						<td><?php echo $usuario->tipo ?></td>
+						<td><?php echo $usuario->estado ?></td>
+						<td>
+							<a class="btn btn-success" href="<?php echo URL ?>/usuarios/editar/<?php echo $usuario->id ?>/">
+								<i class="icon-edit icon-white"></i>
+							</a>
+							<a class="btn btn-danger eliminar" href="<?php echo URL ?>/usuarios/eliminar/<?php echo $usuario->id ?>/">
+								<i class="icon-trash icon-white"></i>
+							</a>
+						</td>
+					</tr>
+				<?php } ?>				
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<div id="myAlert" class="modal hide fade">
+	<div class="modal-header">
+		<button data-dismiss="modal" class="close" type="button">×</button>
+		<h3>Confirmación</h3>
+	</div>
+	<div class="modal-body">
+		<p>¿Está seguro?</p>
+	</div>
+	<div class="modal-footer">
+		<a class="ace btn btn-primary" href="javascript:void(0);">Aceptar</a>
+		<a data-dismiss="modal" class="btn" href="javascript:void(0);">Cancelar</a>
+	</div>
+</div>

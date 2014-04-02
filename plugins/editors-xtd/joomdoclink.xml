@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<install version="1.5" type="plugin" group="editors-xtd">
+  <name>Editor Button - JoomDOC Link</name>
+  <version>2.0.0</version>
+  <creationDate>6. October 2009</creationDate>
+  <author>ARTIO s.r.o., based on JoomlaTools plugin</author>
+  <authorEmail>info@artio.cz</authorEmail>
+  <authorUrl>www.artio.net</authorUrl>
+  <copyright>2009 ARTIO s.r.o.</copyright>
+  <license>This extension is released under the GNU/GPL License</license>
+  <description>JoomDOCLink is a Joomla! editor plugin that allows the insertion of links to JoomDOC files using a popup dialog.</description>
+  <setting published="1"/>
+  <languages folder="language">
+  	<language tag="en-GB">en-GB.plg_editors-xtd_joomdoclink.ini</language>    
+  </languages>
+  <files>
+  	<folder>joomdoclink</folder>
+	<filename plugin="joomdoclink">joomdoclink.php</filename>
+  </files>
+</install>

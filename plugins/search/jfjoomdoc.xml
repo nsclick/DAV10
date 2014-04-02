@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="search">
+	<name>Search - JFjoomDOC</name>
+	<author>ARTIO s.r.o</author>
+	<creationDate>10. September 2009</creationDate>
+	<copyright>Copyright (C) 2009 ARTIO s.r.o.. All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html</license>
+	<authorEmail>info@artio.net</authorEmail>
+	<authorUrl>http://www.artio.cz</authorUrl>
+	<version>2.0.0</version>
+	<description>Allows Searching of JoomDOC Component with JoomFish Translation support.</description>
+	<setting published="0"/>
+	<files>
+		<filename plugin="jfjoomdoc">jfjoomdoc.php</filename>
+	</files>
+	<params>
+		<param name="search_limit" type="text" size="5" default="50" label="Search Limit" description="Number of Search items to return"/>
+		<param name="active_language_only" type="radio" default="0" label="Active language only" description="Search only within active language?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+	</params>
+</install>

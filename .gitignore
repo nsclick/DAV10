@@ -1,0 +1,36 @@
+#--------------------------------------------------
+# Images folder is a big elephant #
+#----------------------------------
+
+images/
+
+# Ignore Zipped Files #
+
+#----------------------
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and DBs #
+#---------------
+*.log
+*.sql
+*.sqlite
+
+# Ignorging extra stuff
+*.swf
+./joomdocs/06_Manual_Consalud_Preferente.doc
+./joomdocs/CODIGO_ETICA_NOV2012.pdf
+./joomdocs/Caso clínico.ppt
+./joomdocs/Docs.rar
+./joomdocs/11_MANUALPARAADMINISTRARDIARIOMURALENINTRANET.doc
+
+# And these are mammuts #
+#------------------------
+./administrator/components/com_akeeba/backup/site-portal.davila.cl-20140121-173321.jpa
+./administrator/components/com_akeeba/backup/site-portal.davila.cl-20130613-172740.jpa

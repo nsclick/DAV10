@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+ <params addpath="/administrator/components/com_do/parametros">
+	<param name="empresa" type="text" label="Nombre Empresa" default="" description="Nombre de la Empresa" />
+	<param name="empresa_rut" type="text" label="Rut Empresa" default="" description="Rut de la Empresa" />
+	<param name="empresa_razonsocial" type="text" label="Razón Social" default="" description="Razón Social de la Empresa" />
+	<param name="empresa_web" type="text" label="Sitio Web" default="" description="Sitio Web de la Empresa" />
+	<param name="direccion" type="text" label="Dirección (2)" default="" description="Dirección (2)" />
+	<param name="telefono" type="text" label="Teléfono (2)" default="" description="Teléfono Fijo (2)" />
+	<param name="celular" type="text" label="Celular (2)" default="" description="Teléfono Celular (2)" />
+	<param name="fax" type="text" label="Fax" default="" description="Nro. de Fax" />
+	<param name="skype" type="text" label="Skype" default="" description="Cta. de Skype" />
+	<param name="@spacer" type="spacer" default="" label="" description="" />
+	<param name="tipo" type="seleccionable" campo="tipo_negocio" label="Tipo de Negocio" default="" description="Tipo de Negocio" />
+	<!--<param name="ejecutivo" type="ejecutivo" label="Ejecutivo" default="" description="Ejecutivo de la Cuenta" />-->
+	<param name="@spacer" type="spacer" default="" label="" description="" />
+	<param name="cargo" type="text" label="Cargo en su Empresa" default="" description="El cargo del cliente, en su Empresa" />
+	<param name="codigo_postal" type="text" label="Código Postal" default="" description="Código Postal" />
+ </params>
+</config>

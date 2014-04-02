@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+ <params>
+	  <param name="menu" type="menuitem" label="Menú" description="Menú del Catálogo" />
+	  <param name="catid_fardos" type="category" section="com_do" label="Categoría Fardos" description="Categoría padre de la sección Fardos" />
+	  <param name="catid_mayorista" type="category" section="com_do" label="Categoría Mayorista" description="Categoría padre de la sección Mayorista" />
+	  <param name="ejecutivo_mayorista" type="user" gid="19" default="" label="Ejecutivo Mayorista" description="Ejecutivo que atenderá las solicitudes Mayoristas" />
+	  <param name="ejecutivo_norte" type="user" gid="19" default="" label="Ejecutivo Zona Norte" description="La zona norte comprende las regiones: Arica-Parinacota, Tarapacá, Antofagasta, Atacama, Coquimbo" />
+	  <param name="ejecutivo_centro" type="user" gid="19" default="" label="Ejecutivo Zona Centro" description="La zona centro comprende las regiones: Valparaíso, Metropolitana, O'Higgins, Maule, Biobío" />
+	  <param name="ejecutivo_sur" type="user" gid="19" default="" label="Ejecutivo Zona Sur" description="La zona sur comprende las regiones: Araucanía, Los Ríos, Los Lagos, Aisén, Magallanes-Antártica Chilena" />
+	  <param name="ejecutivo_internacional" type="user" gid="19" default="" label="Ejecutivo Internacional" description="Ejecutivo para resto del mundo" />
+ </params>
+</config>

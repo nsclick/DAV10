@@ -1,0 +1,38 @@
+<?php //_db($this->funcionarios) ?>
+<div class="widget-box">
+	<div class="widget-title">
+		<h5>Listado de funcionarios</h5>
+	</div>
+	<div class="widget-content nopadding">
+		<table class="table table-bordered data-table">
+			<thead>
+				<tr>
+					<th>Rut</th>
+					<th>Nombres</th>
+					<th>Apellido paterno</th>
+					<th>Apellido materno</th>					
+					<th>Email</th>					
+					<th>Anexo</th>
+					<th>Foto</th>
+				</tr>
+			</thead>
+			<tbody>
+				<?php foreach($this->funcionarios as $funcionario) { ?>
+					<tr class="gradeX">
+						<td><?php echo $funcionario->rut ?></td>
+						<td><?php echo $funcionario->nombres ?></td>
+						<td><?php echo $funcionario->apaterno ?></td>
+						<td><?php echo $funcionario->amaterno ?></td>
+						<td><?php echo $funcionario->email ?></td>
+						<td><?php echo $funcionario->anexo ?></td>
+						<?php if($funcionario->foto != null) { ?>
+							<td><a href="<?php echo URL ?>/funcionarios/editar-foto/<?php echo $funcionario->rut_sin ?>/"><span class="label label-success">Ver foto</span></a> </td>
+						<?php } else { ?>
+							<td><a href="<?php echo URL ?>/funcionarios/editar-foto/<?php echo $funcionario->rut_sin ?>/"><span class="label label-important">Agregar foto</a></span></td>
+						<?php } ?>
+					</tr>
+				<?php } ?>
+			</tbody>
+		</table>
+	</div>
+</div>

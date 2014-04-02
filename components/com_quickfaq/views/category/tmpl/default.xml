@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="QUICKFAQ CATEGORY">
+		<message>
+			<![CDATA[QUICKFAQ CATEGORY TIP]]>
+		</message>
+	</layout>
+	<state>
+		<name>QUICKFAQ CATEGORY</name>
+		<description>QUICKFAQ CATEGORY DESC</description>
+		<url addpath="/administrator/components/com_quickfaq/elements">
+			<param name="cid" type="qfcategory" default="0" label="SELECT CATEGORY" description="SELECT CATEGORY DESC" />
+		</url>
+	</state>
+</metadata>

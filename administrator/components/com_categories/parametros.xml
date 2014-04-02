@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<params>
+		<param name="plantilla" type="list" default="" label="Plantilla" description="Plantilla que se utilizará para mostrar esta categoría">
+			<option value="">- Opción por defecto -</option>
+			<option value="noticias">Noticias</option>
+			<option value="imagenes">Imágenes</option>
+		</param>
+		<param name="fechas" type="radio" default="0" label="Mostrar Fechas" description="Fechas a Mostrar en esta categoría">
+			<option value="1">No</option>
+			<option value="0">Si</option>
+		</param>
+	</params>
+</config>

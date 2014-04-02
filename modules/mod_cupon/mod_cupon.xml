@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+	<name>Cupón Cumpleaños</name>
+	<author>Diseño Objetivo</author>
+	<creationDate>Marzo 2011</creationDate>
+	<copyright>Clínica Dávila. Todos los derechos reservados.</copyright>
+	<license>http://www.do.cl/LICENCIA_DO.txt</license>
+	<authorEmail>info@do.cl</authorEmail>
+	<authorUrl>http://www.do.cl</authorUrl>
+	<version>1.0.0</version>
+	<description>Muestra un popup con un vale de la cafetería para los cumpleañeros</description>
+	<files>
+		<filename module="mod_cupon">mod_cupon.php</filename>
+	</files>
+	<params>
+		<param name="menu" type="menuitem" default="" label="Menú" description="Menú de la caja" />
+		<param name="titulo" type="text" size="30" default="" label="Título" description="Título del módulo" />
+		<param name="subtitulo" type="text" size="30" default="" label="Sub Título" description="Sub título del módulo" />
+	</params>
+</install>

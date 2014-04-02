@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="QUICKFAQ FAVOURITES">
+		<message>
+			<![CDATA[QUICKFAQ FAVOURITES TIP]]>
+		</message>
+	</layout>
+	<state>
+		<name>QUICKFAQ FAVOURITES</name>
+		<description>QUICKFAQ FAVOURITES DESC</description>
+		<params>
+		</params>
+	</state>
+</metadata>

@@ -1,0 +1,10 @@
+<?php
+defined('_JEXEC') or die('Restricted access'); 
+?>
+
+<!--[if lte IE 7]>
+<link type="text/css" rel="stylesheet" media="all" href="modules/mod_jbolo/chat/css/screen_ie.css" />
+<![endif]-->
+
+<?php
+echo $list;

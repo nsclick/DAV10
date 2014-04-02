@@ -1,0 +1,34 @@
+/**
+ * JoomDOC - Joomla! Document Manager
+ * @version $Id: theme10.css 561 2008-01-17 11:34:40Z mjaz $
+ * @package JoomDOC
+ * @copyright (C) 2003-2008 The DOCman Development Team
+ *            Improved to JoomDOC by Artio s.r.o.
+ * @license see COPYRIGHT.php
+ * @link http://www.artio.net Official website
+ * JoomDOC is free software. This version may have been modified pursuant
+ * to the GNU General Public License, and as distributed it includes or
+ * is derivative of works licensed under the GNU General Public License or
+ * other free or open source software licenses.
+ * See COPYRIGHT.php for copyright notices and details.
+ **/
+
+/**
+ * Default DOCman Theme
+ * CSS for Joomla! v1.0.x only
+ *
+ * Creator:  The DOCman Development Team
+ * Website:  http://www.joomlatools.org/
+ * Email:    support@joomlatools.org
+ * Revision: 1.4
+ * Date:     February 2007
+ **/
+ 
+.message {
+	padding: 10px 10px 10px 50px; 
+	margin-bottom: 10px;
+	border: 1px solid gray; 
+	background: #FFFFCC url(../images/message.gif) no-repeat 10px 50%;
+	color: red; 
+	font-weight: bold;
+}

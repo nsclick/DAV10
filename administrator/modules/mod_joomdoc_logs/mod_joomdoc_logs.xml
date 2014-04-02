@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0" client="administrator">
+	<name>Latest logged downloads</name>
+	<creationDate>July 2009</creationDate>
+	<copyright>Copyright (C) 2009 ARTIO s.r.o.. All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html</license>
+	<author>ARTIO s.r.o.</author>
+	<authorEmail>info@artio.cz</authorEmail>
+	<authorUrl>http://www.artio.cz</authorUrl>
+	<version>2.0.0</version>
+	<description>Shows the latest logged downloaded documents in the JoomDOC admin control panel</description>
+	<setting ordering="3" position="joomdoc_cpanel" published="1" module="mod_joomdoc_logs"/>
+	<languages folder="language">
+      	<language tag="en-GB">en-GB.mod_joomdoc_logs.ini</language>    
+    </languages>
+	<files>
+		<filename module="mod_joomdoc_logs">mod_joomdoc_logs.php</filename>
+	</files>
+	<params>
+		<param name="limit" type="text" default="10" label="Limit" description="The number of documents to display (default 10)" />
+	</params>
+</install>

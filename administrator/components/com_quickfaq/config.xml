@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<params>
+		<param name="show_updatecheck" type="radio" default="1" label="SHOW UPDATECHECK" description="SHOW UPDATECHECK DESC">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+		</param>
+		<param name="trigger_onprepare_content" type="radio" default="0" label="ENABLE TRIGGER ONPREPARECONTENT EVENT" description="ENABLE TRIGGER ONPREPARECONTENT EVENT DESC">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+		</param>
+		<param name="show_jcomments" type="radio" default="0" label="ENABLE JCOMMENTS" description="ENABLE JCOMMENTS DESC">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+		</param>
+		<param name="show_jomcomments" type="radio" default="0" label="ENABLE JOMCOMMENTS" description="ENABLE JOMCOMMENTS DESC">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+		</param>
+		
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="show_author" type="radio" default="1" label="SHOW AUTHOR NAMES" description="SHOW AUTHOR NAMES DESC">
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+		<param name="show_create_date" type="radio" default="1" label="SHOW CREATED DATE" description="SHOW CREATED DATE DESC">
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+		<param name="show_modify_date" type="radio" default="1" label="SHOW MODIFIED DATE" description="SHOW MODIFIED DATE DESC">
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+		<param name="show_vote" type="radio" default="1" label="SHOW RATING" description="SHOW RATING DESC">
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+		<param name="show_hits" type="radio" default="1" label="SHOW HITS" description="SHOW HITS DESC">
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+		<param name="show_tags" type="radio" default="1" label="SHOW TAGS" description="SHOW TAGS DESC">
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+		<param name="show_favourites" type="radio" default="1" label="SHOW FAVOURITES" description="SHOW FAVOURITES DESC">
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+		<param name="show_categories" type="radio" default="1" label="SHOW CATEGORIES" description="SHOW CATEGORIES DESC">
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+		
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="filter" type="radio" default="1" label="SHOW FILTERBOX" description="SHOW FILTERBOX DESC">
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+		<param name="display" type="radio" default="1" label="SHOW LIMITBOX" description="SHOW LIMITBOX DESC">
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+		<param name="limit" type="text" default="10" label="LIST LIMIT" description="LIST LIMIT DESC" />
+		<param name="catlimit" type="text" default="5" label="CAT LIST LIMIT" description="CAT LIST LIMIT DESC" />
+
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="show_icons" type="radio" default="1" label="SHOW ICONS" description="SHOW ICONS DESC">
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+		<param name="show_pdf_icon" type="radio" default="1" label="PDF ICON" description="PDF ICON DESC">
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+		<param name="show_print_icon" type="radio" default="1" label="PRINT ICON" description="PRINT ICON DESC">
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+		<param name="show_email_icon" type="radio" default="1" label="EMAIL ICON" description="EMAIL ICON DESC">
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+		<param name="show_state_icon" type="radio" default="1" label="STATE ICON" description="STATE ICON DESC">
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+		
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="upload_extensions" type="text" size="50" default="bmp,csv,doc,gif,ico,jpg,jpeg,odg,odp,ods,odt,pdf,png,ppt,swf,txt,xcf,xls,BMP,CSV,DOC,GIF,ICO,JPG,JPEG,ODG,ODP,ODS,ODT,PDF,PNG,PPT,SWF,TXT,XCF,XLS,zip" label="LEGAL EXTENSIONS LABEL" description="LEGAL EXTENSIONS DESC" />
+		<param name="upload_maxsize" type="text" size="50" default="10000000" label="MAXIMUM SIZE LABEL" description="MAXIMUM SIZE DESC" />
+		<param name="file_path" type="text" size="50" default="components/com_quickfaq/uploads" label="PATH TO FILE FOLDER" description="TIPFILEFOLDER" />
+		<param name="restrict_uploads" type="radio" default="1" label="RESTRICT UPLOADS" description="RESTRICT UPLOADS DESC">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+		</param>
+		<param name="check_mime" type="radio" default="1" label="CHECK MIME" description="CHECK MIME DESC">
+			<option value="0">NO</option>
+			<option value="1">YES</option>		
+		</param>
+		<param name="image_extensions" type="text" size="50" default="bmp,gif,jpg,png" label="LEGAL IMAGE EXTENSIONS LABEL" description="LEGAL IMAGE EXTENSIONS DESC" />
+		<param name="ignore_extensions" type="text" size="50" default="" label="IGNORED EXTENSIONS LABEL" description="IGNORED EXTENSIONS DESC" />
+		
+		<param name="upload_mime" type="text" size="50" default="image/jpeg,image/gif,image/png,image/bmp,application/x-shockwave-flash,application/msword,application/excel,application/pdf,application/powerpoint,text/plain,application/x-zip" label="LEGAL MIME TYPES LABEL" description="LEGAL MIME TYPES DESC" />
+		<param name="upload_mime_illegal" type="text" size="50" default="text/html" label="ILLEGAL MIME TYPES" description="ILLEGAL MIME TYPES DESC" />
+		<param name="enable_flash" type="radio" default="1" label="ENABLE FLASH UPLOADER" description="ENABLE FLASH UPLOADER DESC">
+			<option value="0">NO</option>
+			<option value="1">YES</option>		
+		</param>
+		
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="feed_summary" type="radio" default="0" label="SHOW FEED" description="SHOW FEED DESC">
+			<option value="0">INTRO TEXT</option>
+			<option value="1">FULL TEXT</option>
+		</param>
+	</params>
+</config>

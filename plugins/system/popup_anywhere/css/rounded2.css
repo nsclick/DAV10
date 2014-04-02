@@ -1,0 +1,29 @@
+/*
+	codextension.com POPUP ANYWHERE PLUGIN - version 1.5.0
+______________________________________________________________________
+	@package		Joomla
+	@subpackage	system
+	License http://www.gnu.org/copyleft/gpl.html GNU/GPL
+	Copyright(c) 2010 codeXtension.com All Rights Reserved.
+	Comments & suggestions: http://codextension.com/
+*/
+@CHARSET "UTF-8";
+
+	
+/*light box window formating */
+
+	#sbox-window{
+		/* border */
+		padding:20px !important;
+		border:5px solid #222;
+		background-color:#fff;
+	}
+	
+	#sbox-window, #sbox-content{
+		/* rounded corner */
+		-moz-border-radius: 15px !important;
+		-webkit-border-radius: 15px !important;
+		border-radius: 15px !important;	
+	}
+	
+	

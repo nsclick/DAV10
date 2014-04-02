@@ -1,0 +1,116 @@
+/**
+ * @section buttons
+ *
+ * print, pdf, ...
+ */
+div#quickfaq .buttons
+{ float: left; }
+
+div#quickfaq .buttons a
+{ padding: 0 5px 0 0; }
+
+/**
+ * @section headlines
+ *
+ */
+div#quickfaq h2 {
+/*font-size: 1.3em;*/
+font-size: 125%;
+}
+
+
+/**
+ * @section Categoryview
+ *
+ */
+div#quickfaq .catimg {
+margin: 0 0 0.5em 0.5em;
+float: right;
+position: relative;
+}
+
+/**
+ * @section QuickFAQ Item
+ *
+ */
+div#quickfaq .item_details dl {
+float: right;
+font-size: 95%;
+}
+
+div#quickfaq dl.item_info_right {
+float: left;
+}
+
+div#quickfaq dt { /* definition term */
+float:right;
+}
+
+div#quickfaq dd { /* definition description */
+margin: 0 12em 5px 0;
+}
+
+/**
+ * @section QuickFAQ Table
+ *
+ */
+table.faqitemtable th
+{ font-family:Tahoma; font-size:90% }
+
+div#quickfaq table.faqitemtable th
+{text-align: right; border-right: 0px; border-left: 1px solid #E5E5E5; }
+
+div#quickfaq table.faqitemtable th img
+{ margin: 0 5px 5px 0; }
+
+div#quickfaq table.faqitemtable td
+{ border-right: 0px; border-left: 1px solid #E5E5E5; }
+
+div#quickfaq table.faqitemtable th td #qf_title
+{ text-align: right; }
+
+/**
+ * @section quickfaq Table Filter Form
+ *
+ */
+div#quickfaq .qf_fleft {
+float: right;
+}
+
+div#quickfaq .qf_fright {
+float: left;
+}
+
+/**
+ * @section Editevent Form
+ *
+ */
+
+    div.qf_edit form label {
+    float: right;
+    }
+
+/** save buttons */
+div.qf_save_buttons {
+float: left;
+}
+
+div.qf_box_left,
+div.qf_box_right {
+float: right;
+}
+
+div.qf_box_right {
+float: left;
+}
+
+/** tag selection */
+div#quickfaq .qf_tag {
+	float: right;
+}
+
+div#quickfaq .qf_tagidbox {
+	float: right;
+}
+
+button { font-family: Tahoma; font-size: 12px; }

@@ -1,0 +1,36 @@
+#footer .login-footer {
+	color: #8F8D8D;
+}
+
+#logo h3 {
+	color: white;
+	text-align: center;
+}
+
+#header h1 a {
+	font-size: 15px;
+	line-height: 15px;
+	color: white;
+}
+
+.err-sel-ar {
+	border: 1px solid #953b39 !important;
+	color: #953b39 !important;
+}
+
+.err-sel-ar span {
+	color: #953b39 !important;
+}
+
+.msj-error {
+	color: #953b39 !important;	
+}
+
+.error .select2-choice {
+	border: 1px solid #953b39 !important;
+	color: #953b39 !important;
+}
+
+.excel-prueba {
+	margin: 12px 0 0px !important;
+}

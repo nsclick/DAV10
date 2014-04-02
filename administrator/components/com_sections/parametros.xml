@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+ <params>
+   <param name="plantilla" type="list" default="" label="Plantilla" description="Plantilla que se utilizará para mostrar esta sección">
+	<option value="">- Opción por defecto -</option>
+	<option value="quienessomos">Quienes Somos</option>
+   </param>
+ </params>
+</config>

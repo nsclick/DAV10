@@ -1,0 +1,56 @@
+<div class="row-fluid">
+	<div class="span12">
+		<div class="widget-box">
+			<div class="widget-title"><span class="icon"><i class="icon-signal"></i></span><h5>Estadisticas del sitio</h5><div class="buttons"><a href="#" class="btn btn-mini"><i class="icon-refresh"></i> Actualizar Estadísticas</a></div></div>
+			<div class="widget-content">
+				<div class="row-fluid">
+				<div class="span4">
+					<ul class="site-stats">
+						<a href="<?php echo URL ?>/usuarios/">
+							<li>
+								<i class="icon-user"></i> 
+								<strong><?php echo $this->cantUs->cant_us ?></strong> 
+								<small>Total Usuarios</small>
+							</li>
+						</a>
+						<a href="<?php echo URL ?>/medicos/">
+							<li>
+								<i class="icon-user"></i> 
+								<strong><?php echo $this->cantMe->cant_me ?></strong> 
+								<small>Total Médicos</small>
+							</li>
+						</a>
+						<a href="<?php echo URL ?>/areas/">
+							<li>
+								<i class="icon-th-large"></i> 
+								<strong><?php echo $this->cantAr->cant_ar ?></strong> 
+								<small>Total Áreas</small>
+							</li>
+						</a>
+						<a href="<?php echo URL ?>/subareas/">
+							<li>
+								<i class="icon-th"></i> 
+								<strong><?php echo $this->cantSu->cant_su ?></strong> 
+								<small>Total Sub-áreas</small>
+							</li>
+						</a>
+						<a href="<?php echo URL ?>/especialidades/">
+							<li>
+								<i class="icon-th-list"></i> 
+								<strong><?php echo $this->cantEs->cant_es ?></strong> 
+								<small>Total Especialidades</small>
+							</li>
+						</a>
+					</ul>
+				</div>
+				<div class="span8">
+					<div class="chart"></div>
+				</div>	
+				</div>							
+			</div>
+		</div>					
+	</div>
+</div>
+<div class="row-fluid">
+
+</div>

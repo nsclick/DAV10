@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<install type="component" version="1.5">
+  <name>Clínica Dávila</name>
+  <creationDate>Julio 2010</creationDate>
+  <author>Diseño Objetivo</author>
+  <copyright>Clínica Dávila</copyright>
+  <authorEmail>info@do.cl</authorEmail>
+  <authorUrl>http://www.do.cl</authorUrl>
+  <version>1.0</version>
+  <license>GNU/GPL</license>
+  <description>Componente Clínica Dávila v1.0</description>
+  <params>
+  </params>
+</install>

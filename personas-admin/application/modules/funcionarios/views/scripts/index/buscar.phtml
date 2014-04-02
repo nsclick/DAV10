@@ -1,0 +1,75 @@
+<?php ($this->err) ? $error = $this->err : false ?>
+<div class="widget-box">
+  <div class="widget-title">
+    <span class="icon">
+      <i class="icon-align-justify"></i>                  
+    </span>
+    <h5>Buscar funcionario</h5>
+  </div>
+  <div class="widget-content nopadding">
+    <?php if($error) { ?>
+      <div class="alert alert-error">
+        <button class="close" data-dismiss="alert">×</button>
+        <?php echo $error ?>
+      </div>
+    <?php } ?>
+    <form method="post" class="form-horizontal">
+      <div class="control-group <?php echo($error) ? 'error' : '' ?>">
+        <label class="control-label">Término a buscar</label>
+        <div class="controls">
+          <input type="text" name="busqueda" placeholder="Rut o apellido paterno" value="<?php echo(isset($this->busqueda)) ? $this->busqueda : '' ?>" />
+        </div>
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary">Buscar</button>
+      </div>
+    </form>
+  </div>
+</div>
+<?php if(count($this->lista)) { ?>
+  <div class="widget-box">
+    <div class="widget-title">
+      <h5>Resultado búsqueda</h5>
+    </div>
+    <div class="widget-content nopadding">
+      <table class="table table-bordered data-table">
+        <thead>
+          <tr>
+            <th>Rut</th>
+            <th>Nombres</th>
+            <th>Apellido paterno</th>
+            <th>Apellido materno</th>         
+            <th>Email</th>          
+            <th>Anexo</th>
+            <th>Foto</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php foreach($this->lista as $funcionario) { ?>
+            <tr class="gradeX">
+              <td><?php echo $funcionario->rut ?></td>
+              <td><?php echo $funcionario->nombres ?></td>
+              <td><?php echo $funcionario->apaterno ?></td>
+              <td><?php echo $funcionario->amaterno ?></td>
+              <td><?php echo $funcionario->email ?></td>
+              <td><?php echo $funcionario->anexo ?></td>
+              <?php if($funcionario->foto != null) { ?>
+                <td>
+                  <a href="<?php echo URL ?>/funcionarios/editar-foto/<?php echo $funcionario->rut_sin ?>/">
+                    <span class="label label-success">Ver foto</span>
+                  </a> 
+                </td>
+              <?php } else { ?>
+                <td>
+                  <a href="<?php echo URL ?>/funcionarios/editar-foto/<?php echo $funcionario->rut_sin ?>/">
+                    <span class="label label-important">Agregar foto</span>
+                  </a>
+                </td>
+              <?php } ?>
+            </tr>
+          <?php } ?>
+        </tbody>
+      </table>
+    </div>
+  </div>
+<?php } ?>

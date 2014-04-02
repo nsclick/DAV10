@@ -1,0 +1,7 @@
+:)=smile.png
+:-)=smile.png
+:(=sad.png
+:-(=sad.png
+;)=wink.png
+;-)=wink.png
+:')=cry.png

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="component" version="1.5.0">
+ 	<name>JBolo!</name>
+ 	<creationDate>20th July 2009</creationDate>
+ 	<author>TechJoomla</author>
+ 	<copyright>Copyright (C) 2009 TechJoomla</copyright>
+ 	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+ 	<authorEmail>jbolo@techjoomla.com</authorEmail>
+	<authorUrl>www.techjoomla.com</authorUrl>
+ 	<version>1.0</version>
+	<description></description>
+	<installfile>install.php</installfile>
+	 
+	<!-- Site Main File Copy Section -->
+	<files folder="site">
+		<folder>config</folder>
+		<folder>img</folder>
+		<folder>css</folder>
+		<folder>js</folder>
+		<filename>index.html</filename>			
+		<filename>jbolo.php</filename>
+		<filename>smileys.txt</filename>
+	</files>
+	<languages folder="site/lang">
+		<language tag="en-GB">en-GB.com_jbolo.ini</language>
+	</languages>
+	<install>
+		<queries>
+ 			<query>CREATE TABLE IF NOT EXISTS `#__jbolo` (
+				  `id` int(10) unsigned NOT NULL auto_increment,
+				  `from` varchar(255) NOT NULL default '',
+				  `to` varchar(255) NOT NULL default '',
+				  `message` text NOT NULL,
+				  `sent` datetime NOT NULL default '0000-00-00 00:00:00',
+				  `recd` int(10) unsigned NOT NULL default '0',
+				  PRIMARY KEY  (`id`)
+				) ENGINE = MYISAM CHARACTER SET utf8 COLLATE utf8_general_ci
+			</query> 
+		</queries>
+ 	</install>
+	<administration>
+		<menu img="../components/com_jbolo/img/chat.png">JBolo!</menu>
+		<files folder="admin">
+			<folder>controllers</folder>
+			<folder>models</folder>
+			<folder>views</folder>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>			
+			<filename>admin.jbolo.php</filename>
+		</files>
+		<languages folder="admin/lang">
+			<language tag="en-GB">en-GB.com_jbolo.ini</language>
+		</languages>
+	</administration>
+
+	<modules>
+		<module module="mod_jbolo" title="JBolo!" position="left" order="-1" client="site" published="0">
+			<files folder="mod_jbolo">
+				<filename module="mod_jbolo">mod_jbolo.php</filename>
+				<filename>mod_jbolo.xml</filename>
+				<filename>helper.php</filename>
+				<filename>index.html</filename>
+				<folder>img</folder>
+				<folder>tmpl</folder>
+			</files>
+
+			<languages folder="mod_jbolo">
+				<language tag="en-GB">en-GB.mod_jbolo.ini</language>
+			</languages>
+		</module>
+	</modules>
+
+	<plugins>
+		<plugin plugin="jbolo" group="system">
+			<files folder="plg_jbolo">
+				<file>jbolo.php</file>
+				<file>jbolo.xml</file>
+			</files>
+		</plugin>
+	</plugins>	
+
+	<check>
+		<extension name="jbolo" type="plugins" field="published" value="1">element='jbolo'</extension>
+	</check>
+	
+</install>

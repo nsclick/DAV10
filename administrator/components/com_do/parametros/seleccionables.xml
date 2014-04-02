@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+ <params>
+	  <param name="administrador" type="user" gid="32" default="" label="Usuario Administrador" description="Usuario administrador de Biblioteca" />
+	  <param name="perfil_registrado" type="usergroup" default="" label="Perfil Registrado" description="Perfil de usuarios: Registrados (com_siac)" />
+	  <param name="perfil_socio" type="usergroup" default="" label="Perfil Socio" description="Perfil de usuarios: Socios" />
+	  <param name="perfil_funcionario" type="usergroup" default="" label="Perfil Funcionario" description="Perfil de usuarios: Funcionarios" />
+ </params>
+</config>

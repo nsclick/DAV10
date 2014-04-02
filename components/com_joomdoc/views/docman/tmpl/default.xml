@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Category">
+		<message>Browse selected category or root list categories</message>
+	</layout>
+	<state>
+		<name>Category</name>
+		<description>Browse selected category or root list categories</description>		
+		<url addpath="/administrator/components/com_joomdoc/elements">
+			<param name="gid" type="category" default="" label="Select Category" description="Select category which detail you want display on page" />
+			<param name="task" type="hidden" default="cat_view" />
+		</url>
+	</state>
+</metadata>

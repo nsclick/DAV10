@@ -1,0 +1,292 @@
+div#quickfaq
+{ overflow: hidden; /* clearing in beez */ }
+
+div#quickfaq .clear
+{ border: 0; clear: both; float: none; font-size: 1px; height: 0; line-height: 1px; margin: 0; padding: 0; visibility: hidden;}
+
+div#quickfaq .floattext:after /* ie fix in coditional comments (html source) */
+{content: "."; display: block; height: 0; clear: both; visibility: hidden;}
+
+div#quickfaq .floattext
+{ display:block; /* safari */ }
+
+/**
+ * @section buttons
+ *
+ * print, pdf, ...
+ */
+div#quickfaq .buttons
+{ float: right; }
+
+div#quickfaq .buttons img
+{ border: none; }
+
+div#quickfaq .buttons a
+{ padding: 0 0 0 5px; height: 16px; line-height: 16px; }
+
+
+/**
+ * @section headlines
+ *
+ */
+div#quickfaq h2 {
+font-size: 1.2em; font-weight: bold;
+border-bottom: 2px solid #ddd;
+/*padding:0.5em 0.3em; margin: 0.8em 0;*/
+padding-bottom:0.5em;
+}
+
+div#quickfaq h2 img {
+border: none;
+}
+
+/**
+ * @section pagination
+ *
+ */
+div#quickfaq .pageslinks,
+div#quickfaq .pagescounter {
+text-align: center;
+}
+
+
+/**
+ * @section Categoryview
+ *
+ */
+div#quickfaq .catimg {
+margin: 0 0.5em 0.5em 0;
+float: left;
+position: relative;
+}
+
+div#quickfaq .catimg p {
+font-size: 0.9em; line-height: 180%;
+margin: 0 0 0.5em 0;
+}
+
+div#quickfaq .catdescription {
+margin: 0 0 0.5em 0;
+}
+
+div#quickfaq .subcategories {
+/* font-size: 1.2em; font-weight: bold; */
+border-bottom: 2px solid #ddd;
+padding:0.5em 0.3em; margin: 0.8em 0;
+}
+
+/**
+ * @section QuickFAQ Item
+ *
+ */
+div#quickfaq .taglist {
+margin: 5px 0 10px; padding: 0 5px;
+}
+
+div#quickfaq .item_details {
+border: 1px dashed silver;
+padding: 0.8em;
+margin-bottom: 10px;
+}
+
+div#quickfaq .item_details dl {
+margin: 0;
+float: left;
+width: 48%;
+}
+
+div#quickfaq dl.item_info_right {
+float: right;
+}
+
+div#quickfaq dt { /* definition term */
+margin: 0; padding: 0.3em 0;
+float:left;
+font-size: 1em; font-weight: bold;
+width: 11em;
+background: transparent;
+border-bottom: 1px solid #ddd;
+}
+
+div#quickfaq dd { /* definition description */
+display: block;
+margin: 0 0 5px 12em; padding: 0.3em 0;
+font-size: 1em;
+background: transparent;
+}
+
+div#quickfaq div.description {
+margin: 5px 0; padding: 0 5px;
+}
+
+* html .floattext dd /* ie6 fix against the 3px jog bug */
+{ height: 1%; }
+
+/**
+ * @section QuickFAQ Table
+ *
+ */
+div#quickfaq table.faqitemtable
+{ margin: 1em 1px; width: 99%; font-size: 1em; border-collapse: collapse; border: 1px solid #E5E5E5; }
+
+div#quickfaq table.faqitemtable th
+{ background-color: #EFEFEF; color: #000; font-weight: bold; padding: 0.4em; text-align: left; border-bottom: 1px solid #e5e5e5; border-right: 1px solid #E5E5E5;  }
+
+div#quickfaq table.faqitemtable th img
+{ margin: 0 0 5px 5px; vertical-align: middle; border: none; }
+
+div#quickfaq table.faqitemtable td
+{ padding: 0.4em; border-bottom: 1px solid #e5e5e5; border-right: 1px solid #E5E5E5; vertical-align: top; }
+
+div#quickfaq table.faqitemtable tr.sectiontableentry2 td
+{ background: #F4F4F4; }
+
+div#quickfaq table.faqitemtable tr:hover td
+{ background: #F8F8F8 }
+
+div#quickfaq table.faqitemtable th td #qf_title
+{ text-align: left; width: 80%;  }
+
+div#quickfaq table.faqitemtable th td #qf_votes
+{ text-align: center; width: 10%;  }
+
+div#quickfaq table.faqitemtable th td #qf_hits
+{ text-align: center; width: 10%;  }
+
+
+/**
+ * @section quickfaq Table Filter Form
+ *
+ */
+div#quickfaq #qf_filter {
+margin: 1em 0 0.5em 0; padding: 0.5em;
+border: solid 1px #ddd;
+}
+
+div#quickfaq .qf_fleft {
+float: left;
+}
+
+div#quickfaq .qf_fright {
+float: right;
+}
+
+/**
+ * @section Editevent Form
+ *
+ */
+
+div.qf_edit form fieldset {
+margin: 0 0 1em 0;
+padding: 1em;
+border: 1px solid #ddd;
+}
+
+    div.qf_edit form legend {
+    padding: 0.3em;
+    font-weight: bold;
+    }
+
+    div.qf_edit form label {
+    width: 9em;
+    margin: 0; padding: 0;
+    float: left; display: block;
+    vertical-align: top;
+    }
+
+    div.qf_edit form input,
+    div.qf_edit form button,
+    div.qf_edit form select,
+    div.qf_edit form textarea {
+    margin: 0 0 0.5em 0; padding: 0.2em;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    background-color: #fff;
+    }
+    
+/** save buttons */
+div.qf_save_buttons {
+margin: 0 0 1em 0;
+float: right;
+}
+
+    div.qf_save_buttons button {
+    font-size: 1.5em;
+    cursor: pointer;
+    }
+    
+div.qf_box_left,
+div.qf_box_right {
+width: 45%;
+float: left;
+}
+
+div.qf_box_right {
+float: right;
+}
+
+/** rating bar **/
+div#quickfaq .qf_ratingbarcontainer {
+	border: 1px solid #999999;
+	height: 10px;
+	width: 60px;
+	margin: 2px 2px;
+	display: block;
+}
+div#quickfaq .qf_ratingbar {
+	background-color: silver;
+	height: 10px;
+	display: block;
+}
+
+/** tag selection */
+div#quickfaq .qf_tagline { 
+	width: auto;
+	height: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+div#quickfaq .qf_tag {
+	width: 150px;
+	display: block;
+	float: left;
+	margin: 2px 2px;
+}
+
+div#quickfaq .qf_tagidbox {
+	width: 20px;
+	display: block;
+	float: left;
+}
+
+div#quickfaq .qf_centerimg {
+	text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px;
+}
+
+div#quickfaq .qf_addtag { 
+	margin-top: 10px;
+}
+
+/** state toggler */
+.qf_statetoggler{ 
+	padding: 0;
+	list-style: none;
+	width: 10px;
+}
+
+.options {
+	position: absolute;
+}
+
+#statetoggler li ul li {
+	border: #ddd 1px solid;
+	background-color: #ffffff;
+	color: #000000;
+	padding: 2px;
+	list-style:none;
+}

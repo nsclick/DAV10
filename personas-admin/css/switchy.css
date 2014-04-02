@@ -1,0 +1,48 @@
+.switchy-container{
+  position: relative;
+  margin: 0px auto 8px auto;
+  width: 70px;
+  height: 20px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 4px 15px;
+  box-shadow: 0px 1px 1px #aaa;
+  float:left;
+}
+
+.switchy-bar{
+  position: relative;
+  background: #A1EA7F;
+  border-radius: 16px;
+  box-shadow: 0px 2px 6px #756381 inset;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.switchy-slider{
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  left: 0px;
+  cursor: pointer;
+  border-radius: 9px;
+  box-shadow: 0px 2px 4px 0px #777;
+  margin: 2px;
+}
+
+.estado-msj {
+  float: left;
+  margin: 5px auto 0px auto;
+  padding: 0 0 0 8px;
+}
+
+.estado-msj .act {
+  color: #A1EA7F;
+}
+
+.estado-msj .des {
+  color: #ED7A7A;
+
+}

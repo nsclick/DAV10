@@ -1,0 +1,39 @@
+table td {
+	font-size: 10px;
+}
+tbody input[type="text"], 
+tbody input[type="password"], 
+.ui-autocomplete-input, 
+tbody textarea, .uneditable-input {
+	padding: 2px;
+}
+tbody select, 
+tbody input[type="file"] {
+	height: 27px;
+	line-height: 30px;
+}
+tbody .btn {
+	padding: 2px 7px;
+}
+tbody .input-medium {
+	width: 115px;
+}
+tbody select, 
+tbody textarea, 
+tbody input[type="text"], 
+tbody input[type="password"], 
+tbody input[type="datetime"], 
+tbody input[type="datetime-local"], 
+tbody input[type="date"], 
+tbody input[type="month"], 
+tbody input[type="time"], 
+tbody input[type="week"], 
+tbody input[type="number"], 
+tbody input[type="email"], 
+tbody input[type="url"], 
+tbody input[type="search"], 
+tbody input[type="tel"], 
+tbody input[type="color"], 
+tbody .uneditable-input {
+	font-size: 10px;
+}

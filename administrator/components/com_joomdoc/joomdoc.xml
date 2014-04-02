@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="component" version="1.5.0">
+	<name>JoomDOC</name>
+	<creationDate>22. September 2009</creationDate>
+	<author>ARTIO s.r.o.</author>
+	<authorEmail>info@artio.net</authorEmail>
+	<authorUrl>www.artio.net</authorUrl>
+	<copyright>Copyright (C) 2009 ARTIO s.r.o.. All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html</license>
+	<version>2.0.1</version>
+	<description>Joomla Document Management System</description>
+	<installfile>install.docman.php</installfile>
+	<uninstallfile>uninstall.docman.php</uninstallfile>
+	<languages folder="language/site">
+      	<language tag="en-GB">en-GB.com_joomdoc.ini</language>    
+    </languages>
+	<files folder="site">
+		<filename>controller.php</filename>
+		<filename>joomdoc.php</filename>
+		<filename>footer.php</filename>
+		<filename>index.html</filename>
+		<filename>router.php</filename>
+		<folder>assets</folder>
+		<folder>helpers</folder>
+		<folder>views</folder>
+	</files>
+	<install>
+		<sql>
+			<file charset="utf8" driver="mysql">install.sql</file>
+		</sql>
+	</install>
+	<administration>
+		<languages folder="language/admin">
+      		<language tag="en-GB">en-GB.com_joomdoc.ini</language>    
+      		<language tag="en-GB">en-GB.com_joomdoc_common.ini</language>
+    	</languages>
+		<menu img="components/com_joomdoc/images/dm_documents_16.png">JoomDOC</menu>
+		<submenu>
+      		<menu img="components/com_joomdoc/images/dm_files_16.png" link="option=com_joomdoc&amp;section=files">Files</menu>
+      		<menu img="components/com_joomdoc/images/dm_documents_16.png" link="option=com_joomdoc&amp;section=documents">Documents</menu>
+      		<menu img="components/com_joomdoc/images/dm_categories_16.png" link="option=com_joomdoc&amp;section=categories">Categories</menu>
+      		<menu img="components/com_joomdoc/images/dm_groups_16.png" link="option=com_joomdoc&amp;section=groups">Groups</menu>
+      		<menu img="components/com_joomdoc/images/dm_licenses_16.png" link="option=com_joomdoc&amp;section=licenses">Licenses</menu>
+      		<menu img="components/com_joomdoc/images/dm_stats_16.png" task="stats">Statistics</menu>
+      		<menu img="components/com_joomdoc/images/dm_logs_16.png" link="option=com_joomdoc&amp;section=logs">Download Logs</menu>
+      		<menu img="components/com_joomdoc/images/dm_config_16.png" link="option=com_joomdoc&amp;section=config">Configuration</menu>
+      		<menu img="components/com_joomdoc/images/dm_templates_16.png" link="option=com_joomdoc&amp;section=themes">Themes</menu>
+    	</submenu>
+		<files folder="admin">
+			<filename>admin.joomdoc.html.php</filename>
+			<filename>docman.migration.php</filename>
+			<filename>admin.joomdoc.php</filename>
+			<filename>COPYRIGHT.php</filename>
+			<filename>docman.class.php</filename>
+			<filename>docman.config.php</filename>
+			<filename>docman.params.xml</filename>
+			<filename>CHANGELOG.php</filename>
+			<filename>index.html</filename>
+			<filename>install.docman.helper.php</filename>
+			<filename>install.docman.php</filename>
+			<filename>install.sql</filename>
+			<filename>toolbar.docman.class.php</filename>
+			<filename>toolbar.docman.class15.php</filename>
+			<filename>toolbar.joomdoc.html.php</filename>
+			<filename>toolbar.joomdoc.php</filename>
+			<filename>uninstall.docman.php</filename>
+			<folder>alibraries</folder>
+			<folder>classes</folder>
+			<folder>contrib</folder>
+			<folder>elements</folder>
+			<folder>extensions</folder>
+			<folder>helpers</folder>
+			<folder>images</folder>
+			<folder>includes</folder>
+			<folder>language</folder>
+			<folder>temp</folder>
+		</files>
+	</administration>
+</install>

@@ -1,0 +1,178 @@
+<?php //_db($this->resp) ?>
+<div class="row-fluid">
+	<div class="span12">
+		<div class="widget-box">
+			<div class="widget-title">
+				<span class="icon">
+					<i class="icon-align-justify"></i>									
+				</span>
+				<h5>Editar usuario <?php echo $this->usuario->nombre ?></h5>
+			</div>
+			<div class="widget-content nopadding">
+				<?php if(isset($this->msj)) { ?>
+					<div class="alert alert-success">
+						<button class="close" data-dismiss="alert">×</button>
+						<strong>Éxito</strong> <?php echo $this->msj ?>
+					</div>
+				<?php } else if(isset($this->adv)) { ?>
+					<div class="alert">
+						<button class="close" data-dismiss="alert">×</button>
+						<strong>Advertencia</strong> <?php echo $this->adv ?>
+					</div>
+				<?php } ?>
+				<form id="form-editar-usuario" method="post" class="form-horizontal" />
+					<div class="control-group <?php echo(isset($this->err['nombre'])) ? 'error' : '' ?>">
+						<label class="control-label">Nombre</label>
+						<div class="controls">
+							<input name="usuario[nombre]" type="text" placeholder="Ej. Pedro Soto" value="<?php echo(isset($this->resp['nombre'])) ? $this->resp['nombre'] : $this->usuario->nombre ?>" />
+							<div class="msj-error">
+								<?php if(isset($this->err['nombre'])) { ?>
+									<ul>
+										<?php foreach($this->err['nombre'] as $val) { ?>
+											<li><small><?php echo $val ?></small></li>
+										<?php } ?>
+									</ul>
+								<?php } ?>
+							</div>
+						</div>
+					</div>
+
+					<div class="control-group <?php echo(isset($this->err['email'])) ? 'error' : '' ?>">
+						<label class="control-label">Email</label>
+						<div class="controls">
+							<input name="usuario[email]" type="text" placeholder="Ej: nombre@email.com" value="<?php echo(isset($this->resp['email'])) ? $this->resp['email'] : $this->usuario->email ?>" />
+							<div class="msj-error">
+								<?php if(isset($this->err['email'])) { ?>
+									<ul>
+										<?php foreach($this->err['email'] as $val) { ?>
+											<li><small><?php echo $val ?></small></li>
+										<?php } ?>
+									</ul>
+								<?php } ?>
+							</div>
+						</div>
+					</div>
+
+					<div class="control-group <?php echo(isset($this->err['nombre_usuario'])) ? 'error' : '' ?>">
+						<label class="control-label">Nombre de usuario</label>
+						<div class="controls">
+							<input name="usuario[nombre_usuario]" type="text" placeholder="Ej: nombre_algo" value="<?php echo(isset($this->resp['nombre_usuario'])) ? $this->resp['nombre_usuario'] : $this->usuario->nombre_usuario ?>" />
+							<div class="msj-error">
+								<?php if(isset($this->err['nombre_usuario'])) { ?>
+									<ul>
+										<?php foreach($this->err['nombre_usuario'] as $val) { ?>
+											<li><small><?php echo $val ?></small></li>
+										<?php } ?>
+									</ul>
+								<?php } ?>
+							</div>
+						</div>
+					</div>
+					
+					<div class="control-group">
+						<div class="controls">
+							<?php if(isset($this->err['contrasena']) || isset($this->err['recontrasena'])) { ?>
+								<a class="no-mod-contr" href="#">No modificar contraseña</a>
+							<?php } else { ?>
+								<a class="mod-contr" href="#">Modificar contraseña</a>
+							<?php } ?>
+						</div>
+					</div>
+
+					<div class="contrasenas" <?php echo(isset($this->err['contrasena']) || isset($this->err['recontrasena'])) ? '' : 'style="display:none"' ?>>
+						<div class="control-group <?php echo(isset($this->err['contrasena'])) ? 'error' : '' ?>">
+							<label class="control-label">Contraseña</label>
+							<div class="controls">
+								<input <?php echo(isset($this->err['contrasena']) || isset($this->err['recontrasena'])) ? '' : 'disabled' ?> name="usuario[contrasena]" type="password" value="<?php echo(isset($this->resp['contrasena'])) ? $this->resp['contrasena'] : '' ?>" />
+								<div class="msj-error">
+									<?php if(isset($this->err['contrasena'])) { ?>
+										<ul>
+											<?php foreach($this->err['contrasena'] as $val) { ?>
+												<li><small><?php echo $val ?></small></li>
+											<?php } ?>
+										</ul>
+									<?php } ?>
+								</div>
+							</div>
+						</div>
+
+						<div class="control-group <?php echo(isset($this->err['recontrasena'])) ? 'error' : '' ?>">
+							<label class="control-label">Repetir contraseña</label>
+							<div class="controls">
+								<input <?php echo(isset($this->err['contrasena']) || isset($this->err['recontrasena'])) ? '' : 'disabled' ?> name="usuario[recontrasena]" type="password" value="<?php echo(isset($this->resp['recontrasena'])) ? $this->resp['recontrasena'] : '' ?>" />
+								<div class="msj-error">
+									<?php if(isset($this->err['recontrasena'])) { ?>
+										<ul>
+											<?php foreach($this->err['recontrasena'] as $val) { ?>
+												<li><small><?php echo $val ?></small></li>
+											<?php } ?>
+										</ul>
+									<?php } ?>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="estado control-group <?php echo(isset($this->err['estado'])) ? 'error' : '' ?>">
+						<label class="control-label">Estado</label>
+						<div class="controls">
+							<select id="estado" name="usuario[estado]">
+								<?php if(isset($this->resp['estado'])) { ?>
+									<option value="1" <?php echo($this->resp['estado'] == '1') ? 'selected' : '' ?>>Habilitado</option>
+									<option value="0" <?php echo($this->resp['estado'] == '0') ? 'selected' : '' ?>>Deshabilitado</option>
+								<?php } else { ?>
+									<option value="1" <?php echo($this->usuario->estado == '1') ? 'selected' : '' ?>>Habilitado</option>
+									<option value="0" <?php echo($this->usuario->estado == '0') ? 'selected' : '' ?>>Deshabilitado</option>
+								<?php } ?>
+							</select>
+							<div class="estado-msj"></div>
+							<div class="msj-error">
+								<?php if(isset($this->err['estado'])) { ?>
+									<ul>
+										<?php foreach($this->err['estado'] as $val) { ?>
+											<li><small><?php echo $val ?></small></li>
+										<?php } ?>
+									</ul>
+								<?php } else { ?>
+									<ul></ul>
+								<?php } ?>
+							</div>
+						</div>
+					</div>
+
+					<div class="control-group <?php echo(isset($this->err['tipo'])) ? 'error' : '' ?>">
+						<label class="control-label">Tipo</label>
+						<div class="controls">
+							<div class="control-group">
+								<select class="sel2" name="usuario[tipo]">
+									<?php if(isset($this->resp['tipo'])) { ?>
+										<option value="0" <?php echo($this->resp['tipo'] == '0') ? 'selected' : '' ?>>Seleccione un tipo</option>
+										<option value="ADM" <?php echo($this->resp['tipo'] == 'ADM') ? 'selected' : '' ?>>Administrador</option>
+										<option value="USU" <?php echo($this->resp['tipo'] == 'USU') ? 'selected' : '' ?>>Usuario</option>
+									<?php } else { ?>
+										<option value="0" <?php echo($this->usuario->tipo == '0') ? 'selected' : '' ?>>Seleccione un tipo</option>
+										<option value="ADM" <?php echo($this->usuario->tipo == 'ADM') ? 'selected' : '' ?>>Administrador</option>
+										<option value="USU" <?php echo($this->usuario->tipo == 'USU') ? 'selected' : '' ?>>Usuario</option>
+									<?php } ?>
+								</select>
+								<div class="msj-error">
+									<?php if(isset($this->err['tipo'])) { ?>
+										<ul>
+											<?php foreach($this->err['tipo'] as $val) { ?>
+												<li><small><?php echo $val ?></small></li>
+											<?php } ?>
+										</ul>
+									<?php } ?>
+								</div>
+							</div>
+						</div>
+					</div>
+					<input type="hidden" name="usuario[id]" value="<?php echo $this->usuario->id ?>" />
+					<div class="form-actions">
+						<button type="submit" class="btn btn-primary">Guardar</button>
+					</div>
+				</form>
+			</div>
+		</div>						
+	</div>
+</div>

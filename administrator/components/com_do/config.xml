@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+ <params addpath="/administrator/components/com_do/parametros">
+	  <param name="controlador" type="controlador" default="" label="Controlador" description="Controlador que se utilizará por defecto." />
+	  <param name="tarea" type="text" default="" label="Tarea" description="Tarea que se utilizará por defecto." />
+ </params>
+</config>

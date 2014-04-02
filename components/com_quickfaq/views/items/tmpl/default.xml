@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="QUICKFAQ ITEM">
+		<message>
+			<![CDATA[QUICKFAQ ITEM TIP]]>
+		</message>
+	</layout>
+	<state>
+		<name>QUICKFAQ ITEM</name>
+		<description>QUICKFAQ ITEM DESC</description>
+		<url addpath="/administrator/components/com_quickfaq/elements">
+			<param name="id" type="item" default="0" label="SELECT ITEM" description="SELECT ITEM DESC" />
+		</url>
+	</state>
+</metadata>

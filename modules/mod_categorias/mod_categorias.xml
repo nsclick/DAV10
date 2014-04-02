@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+	<name>Categorías</name>
+	<author>Diseño Objetivo</author>
+	<creationDate>Julio 2010</creationDate>
+	<copyright>Clínica Dávila. Todos los derechos reservados.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@do.cl</authorEmail>
+	<authorUrl>http://www.do.cl</authorUrl>
+	<version>1.0.0</version>
+	<description>Muestra los artículos de las categorías (en pestañas) de una sección.</description>
+	<files>
+		<filename module="mod_categorias">mod_categorias.php</filename>
+	</files>
+	<params>
+		<param name="menu" type="menuitem" default="" label="Menú" description="Menú de la caja" />
+	</params>
+</install>

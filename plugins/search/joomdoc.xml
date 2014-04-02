@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="search">
+	<name>Search - JoomDOC</name>
+	<author>ARTIO s.r.o</author>
+	<creationDate>10. September 2009</creationDate>
+	<copyright>Copyright (C) 2009 ARTIO s.r.o.. All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html</license>
+	<authorEmail>info@artio.net</authorEmail>
+	<authorUrl>http://www.artio.cz</authorUrl>
+	<version>2.0.0</version>
+	<description>Allows Searching of JoomDOC Component Documents.</description>
+	<setting published="1"/>
+	<files>
+		<filename plugin="joomdoc">joomdoc.php</filename>
+	</files>
+	<params>
+		<param name="search_limit" type="text" size="5" default="50" label="Search Limit" description="Number of Search items to return"/>
+	</params>
+</install>

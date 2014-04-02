@@ -1,0 +1,40 @@
+/* jQuery TreeTable Core 2.0 stylesheet
+ *
+ * This file contains styles that are used to display the tree table. Each tree
+ * table is assigned the +treeTable+ class.
+ * ========================================================================= */
+
+/* jquery.treeTable.collapsible
+ * ------------------------------------------------------------------------- */
+ /*
+.gpti_reporte { padding:0px 0px 0px 0px; }
+*/
+ 
+.treeTable 								{  }
+.treeTable tr.nivel-uno					{ background-color:#DFDFDF; font-size:11px; }
+.treeTable tr.nivel-dos					{ background-color:#EEE; font-size:10px; }
+.treeTable tr.nivel-tres				{ background-color:#F9F9F9; font-size:9px; }
+.treeTable tr.nivel-uno td,
+.treeTable tr.nivel-dos td,
+.treeTable tr.nivel-tres td				{ padding:0px; margin:0px; }
+
+tr.nivel-uno div.tiempo 				{ background:#F90; }
+tr.nivel-dos div.tiempo 				{ background:#F40; }
+tr.nivel-tres div.tiempo 				{ background:#F00; }
+div.tiempo								{ height:15px; /* float:left; */ display:block; padding:0px !important; }
+/*
+#gpti_reporte_fechas span				{ margin:0px !important; padding:0px !important;  }
+*/
+.treeTable th 							{ color:#FFF; background:#D80F16; height:34px; cursor:pointer; font-size:11px; }
+.treeTable td 							{ color:#666; height:34px; vertical-align:middle; }
+.treeTable tr td .expander 				{ background-position: left center;  background-repeat: no-repeat;  cursor: pointer;  padding: 0;  zoom: 1; /* IE7 Hack */}
+.treeTable tr.collapsed td .expander	{ background-image: url(../imagenes/toggle-expand-dark.png); font-size:9px; }
+.treeTable tr.expanded td .expander 	{ background-image: url(../imagenes/toggle-collapse-dark.png); }
+/* jquery.treeTable.sortable
+ * ------------------------------------------------------------------------- */
+.treeTable tr.selected, .treeTable tr.accept 	{ background-color: #F3F3F3; color:#fff;}
+.treeTable tr.collapsed.selected td .expander, 
+.treeTable tr.collapsed.accept td .expander 	{ background-image: url(../imagenes/toggle-expand-light.png); }
+.treeTable tr.expanded.selected td .expander, 
+.treeTable tr.expanded.accept td .expander 		{ background-image: url(../imagenes/toggle-collapse-light.png); }
+.treeTable .ui-draggable-dragging 				{ color:#000; z-index:1000px; }

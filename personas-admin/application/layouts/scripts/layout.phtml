@@ -1,0 +1,66 @@
+<?php echo $this->doctype();echo "\n"; ?>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="es" class="no-js"> <!--<![endif]-->
+	<head>
+		<?php echo $this->headMeta(); echo "\n"; ?>
+		<?php echo $this->headTitle(); echo "\n"; ?>
+		<?php echo $this->headLink(); echo "\n"; ?>
+		<script type="text/javascript" src="<?php echo URL . '/js/vendor/modernizr-2.6.2.min.js' ?>"></script>
+        <?php if(strstr(URI, "funcionarios/editar")) { ?>
+            <noscript><link rel="stylesheet" href="<?php echo URL ?>/css/file-upload/jquery.fileupload-ui-noscript.css"></noscript>
+        <?php } ?>
+	</head>
+	<body>
+		<!--[if lt IE 7]><p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p><![endif]-->
+		
+		<?php if(strstr(URI, '/ingresar')) { ?>
+			<div id="content">
+				<div class="container-fluid">
+					<?php echo $this->layout()->content;?>
+					<div class="row-fluid">
+						<div id="footer" class="span12">
+							<?php echo $this->action("footer","layout"); ?>
+						</div>
+					</div>
+				</div>
+			</div>
+		<?php } else { ?>
+			<?php echo $this->action("header","layout"); ?>
+			<div id="sidebar">
+				<?php echo $this->action("sidebar","layout"); ?>
+			</div>
+			<div id="content">
+				<?php echo $this->action("headerbody", "layout"); ?>
+				<div class="container-fluid">
+					<?php echo $this->layout()->content;?>
+					<div class="row-fluid">
+						<div id="footer" class="span12">
+							<?php echo $this->action("footer","layout"); ?>
+						</div>
+					</div>
+				</div>
+			</div>
+		<?php } ?>
+
+        <?php echo $this->headScript(); echo "\n"; ?>
+
+        <?php if(strstr(URI, "funcionarios/editar") || strstr(URI, "carga-masiva-fotos")) { ?>
+			<script src="<?php echo URL ?>/js/file-upload/tmpl.min.js"></script>
+			<script src="<?php echo URL ?>/js/file-upload/load-image.min.js"></script>
+            <script src="<?php echo URL ?>/js/file-upload/canvas-to-blob.min.js"></script>
+			<script src="<?php echo URL ?>/js/file-upload/jquery.blueimp-gallery.min.js"></script>
+			<script src="<?php echo URL ?>/js/file-upload/jquery.iframe-transport.js"></script>
+			<script src="<?php echo URL ?>/js/file-upload/jquery.fileupload.js"></script>
+			<script src="<?php echo URL ?>/js/file-upload/jquery.fileupload-process.js"></script>
+			<script src="<?php echo URL ?>/js/file-upload/jquery.fileupload-resize.js"></script>
+			<script src="<?php echo URL ?>/js/file-upload/jquery.fileupload-validate.js"></script>
+			<script src="<?php echo URL ?>/js/file-upload/jquery.fileupload-ui.js"></script>
+			
+			<!--[if gte IE 8]>
+			    <script src="<?php echo URL ?>/js/file-upload/cors/jquery.xdr-transport.js"></script>
+			<![endif]-->
+		<?php } ?>
+	</body>
+</html>

@@ -1,0 +1,907 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module"	version="1.7"	client="site"	method="upgrade">
+<name>Simple Spotlight</name>
+<author>Pixel Point Creative </author>
+<creationDate>December 2011</creationDate>
+<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+<authorEmail>info@pixelpointcreative.com</authorEmail>
+<authorUrl>http://www.pixelpointcreative.com</authorUrl>
+<version>2.2</version>
+<description> 
+
+    	<![CDATA[
+<style type="text/css">
+		.panel {background: #ddd;
+		background-image: -moz-linear-gradient(100% 100% 90deg, rgba(225,225,225,1), rgba(255,255,255,1));
+		background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255,255,255,1)), to(rgba(225,225,225,1)));
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e1e1e1');
+		-moz-border-radius: 2px 2px 2px 2px;
+		-webkit-border-radius: 2px 2px 2px 2px;
+		border-radius: 2px 2px 2px 2px;
+		-moz-box-shadow: 1px 1px 2px #ddd;
+		-webkit-box-shadow: 1px 1px 2px #ddd;
+		border-box-shadow: 1px 1px 2px #ddd;
+		border: 1px solid #ccc;
+		padding: 6px 10px;		
+		color: #444;		
+		text-decoration: none;}
+		.pane-sliders .title {padding: 4px; }
+		.pane-sliders .panel h3 {border-bottom:none;}
+		.panelform a {color:#828627;}
+		table.admintable td.paramlist_key {font-weight:normal;text-transform:uppercase;text-align:left;}
+		table.admintable td.paramlist_value label {text-transform:none;}
+		table.admintable td.key, table.admintable td.paramlist_key,.pane-sliders .content,.pane-sliders .panel h3, div.panel fieldset {background:none;}
+		div.panel fieldset {margin-bottom:0;padding-bottom:0;}
+		table.admintable td.key, table.admintable td.paramlist_key {border:none;}
+		form label, form span.faux-label {color:#394a12;}
+		.panelform input, .panelform select{padding:5px;border-radius:3px; }
+		.panelform input[type="radio"]{margin: 10px 5px 0 0;}
+		#jform_params_target { width: 110px;}	
+		fieldset.panelform label, fieldset.panelform div.paramrow label, fieldset.panelform span.faux-label { padding: 5px 5px 0 0;}
+  .pane-toggler-down span {
+    background: url("/modules/mod_ppc_simple_spotlight/img/button/arrows_ext.png") no-repeat scroll bottom left transparent !important;
+    padding: 7px 0px 7px 40px;
+    padding-left:34px!important;
+    font-size: 15px;
+    font-weight:normal;
+   color:#394a12;
+}
+.pane-toggler span {
+    background: url("/modules/mod_ppc_simple_spotlight/img/button/arrows_ext.png") no-repeat top left transparent !important;
+    padding: 7px 0px 7px 40px;
+    padding-left:34px!important;
+    font-size: 15px;
+    font-weight:normal;
+    color:#394a12;
+   }
+	</style>
+	
+	JQuery image rotator with links.This rotator uses the cycle plugin for 25 great effects.
+	]]></description>
+
+<files>
+      	<filename module="mod_ppc_simple_spotlight">mod_ppc_simple_spotlight.php</filename> 
+	<filename>mod_ppc_simple_spotlight.xml</filename>
+	<folder>img</folder>
+	<folder>js</folder>
+	<folder>css</folder>	
+    <folder>elements</folder>
+</files>
+<params addpath="/modules/mod_ppc_simple_spotlight/elements">
+<param type="panel" title="General" />	
+<param label="Version Check" type="upgradecheck15"/>	
+<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="Module Class Suffix"></param>
+<param name="width" type="text" default="910" label="Width" description="Specify width" />
+<param name="height" type="text" default="258" label="Height" description="Specify height" />
+
+<param name="effect" type="list" label="Effect"	description="Effect"	default="toss"	>
+<option value="fade">Fade</option>
+<option value="fadeZoom">Fade Zoom</option>
+<option value="zoom">Zoom</option>
+<option value="shuffle">Shuffle</option>
+<option value="toss">Toss</option>
+<option value="wipe">Wipe</option>
+<option value="cover">Cover</option>
+<option value="uncover">Uncover</option>
+<option value="blindX">Blind X</option>
+<option value="blindY">Blind Y</option>
+<option value="blindZ">Blind Z</option>
+<option value="growY">Grow Y</option>
+<option value="curtainX">Curtain X</option>
+<option value="curtainY">Curtain Y</option>
+<option value="slideX">Slide X</option>
+<option value="slideY">Slide Y</option>
+<option value="turnUp">Turn Up</option>
+<option value="turnDown">Turn Down</option>
+<option value="turnLeft">Turn Left</option>
+<option value="turnRight">Turn Right</option>
+<option value="scrollRight">Scroll Right</option>
+<option value="scrollLeft">Scroll Left</option>
+<option value="scrollUp">Scroll Up</option>
+<option value="scrollDown">Scroll Down</option>
+<option value="all">Random</option>
+				
+</param>
+<param name="play" type="list"	label="Auto Start"	description=""	default="1"	>
+	<option value="1">Yes</option>
+    <option value="0">No</option>
+	</param>
+            <param name="slideshow_speed" type="text" default="800"	label="Animation Duration"	description="Animation Duration" />
+            <param name="timer_speed" type="text" default="5000"	label="Interval"		description="Interval" />
+<param name="random" type="radio" default="1" label="Random" description="Random rotation.">
+    <option value="0">No</option>
+    <option value="1">Yes</option>
+</param>
+<param name="nav" type="radio" default="1" label="Navigation Buttons" description="Show/Hide Navigation Buttons">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</param>
+<param name="buttons" type="radio" default="right" label="Buttons Position" description="Where do buttons appear?">
+        <option value="left">Left</option>
+        <option value="right">Right</option>
+<option value="center">Center</option> 
+    </param>
+	
+	<param type="panel" title="Image Setting 1-10" />	
+	
+<param name="@spacer1" type="spacer" default="&lt;div style=&quot;font-family:arial;font-size:15px;color:#fff; text-shadow:1px 1px 1px #333;padding:7px;margin:0;background:#828627;&quot;&gt;Image 1&lt;/div&gt;" />
+<param name="show1" type="radio" default="1" label="Show this Image?" description="Show image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</param>
+<param name="spotlightImage" type="imagelistupload15" default="banner1.jpg" label="Image 1" description="" directory="modules/mod_ppc_simple_spotlight/img" exclude="button-next\.png|button-prev\.png" stripext="0" />
+<param name="nolink" type="radio" default="0" label="Hyperlink Image?" description="Add Link to image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</param>
+<param name="link" type="text" default="" size="60" label="Link URL" description="Enter the complete url that should open when you click on this image." />
+<param name="window" type="radio" default="_blank" label="Link Window" description="Open links in new window or same window?">
+<option value="_blank">New Window</option>
+<option value="_self">Same Window</option>
+</param>
+<param name="alt" type="text" default="image"	label="Alt/Title"	description="alt and title tag for image" />
+<param name="@spacer2" type="spacer" default="&lt;div style=&quot;font-family:arial;font-size:15px;color:#fff; text-shadow:1px 1px 1px #333;padding:7px;margin:0;background:#828627;&quot;&gt;Image 2&lt;/div&gt;" />
+<param name="show2" type="radio" default="1" label="Show this Image?" description="Show image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</param>
+<param name="spotlightImage2" type="imagelistupload15" default="banner2.jpg" label="Image 2" description="" directory="modules/mod_ppc_simple_spotlight/img" exclude="button-next\.png|button-prev\.png" stripext="0" />
+<param name="nolink2" type="radio" default="0" label="Hyperlink Image?" description="Add Link to image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</param>
+<param name="link2" type="text" default="" size="60" label="Link URL" description="Enter the complete url that should open when you click on this image." />
+<param name="window2" type="radio" default="_blank" label="Link Window" description="Open links in new window or same window?">
+<option value="_blank">New Window</option>
+<option value="_self">Same Window</option>
+</param>
+<param name="alt2" type="text" default="image"	label="Alt/Title"	description="alt and title tag for image" />
+
+<param name="@spacer3" type="spacer" default="&lt;div style=&quot;font-family:arial;font-size:15px;color:#fff; text-shadow:1px 1px 1px #333;padding:7px;margin:0;background:#828627;&quot;&gt;Image 3&lt;/div&gt;" />
+<param name="show3" type="radio" default="1" label="Show this Image?" description="Show image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</param>
+<param name="spotlightImage3" type="imagelistupload15" default="banner3.jpg" label="Image 3" description="" directory="modules/mod_ppc_simple_spotlight/img" exclude="button-next\.png|button-prev\.png" stripext="0" />
+<param name="nolink3" type="radio" default="0" label="Hyperlink Image?" description="Add Link to image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</param>
+<param name="link3" type="text" default="" size="60" label="Link URL" description="Enter the complete url that should open when you click on this image." />
+<param name="window3" type="radio" default="_blank" label="Link Window" description="Open links in new window or same window?">
+<option value="_blank">New Window</option>
+<option value="_self">Same Window</option>
+</param>
+<param name="alt3" type="text" default="image"	label="Alt/Title"	description="alt and title tag for image" />
+
+<param name="@spacer4" type="spacer" default="&lt;div style=&quot;font-family:arial;font-size:15px;color:#fff; text-shadow:1px 1px 1px #333;padding:7px;margin:0;background:#828627;&quot;&gt;Image 4&lt;/div&gt;" />
+<param name="show4" type="radio" default="0" label="Show this Image?" description="Show image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</param>
+<param name="spotlightImage4" type="imagelistupload15" default="" label="Image 4" description="" directory="modules/mod_ppc_simple_spotlight/img" exclude="button-next\.png|button-prev\.png" stripext="0" />
+<param name="nolink4" type="radio" default="0" label="Hyperlink Image?" description="Add Link to image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</param>
+<param name="link4" type="text" default="" size="60" label="Link URL" description="Enter the complete url that should open when you click on this image." />
+<param name="window4" type="radio" default="_blank" label="Link Window" description="Open links in new window or same window?">
+<option value="_blank">New Window</option>
+<option value="_self">Same Window</option>
+</param>
+<param name="alt4" type="text" default="image"	label="Alt/Title"	description="alt and title tag for image" />
+
+<param name="@spacer5" type="spacer" default="&lt;div style=&quot;font-family:arial;font-size:15px;color:#fff; text-shadow:1px 1px 1px #333;padding:7px;margin:0;background:#828627;&quot;&gt;Image 5&lt;/div&gt;" />
+<param name="show5" type="radio" default="0" label="Show this Image?" description="Show image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</param>
+<param name="spotlightImage5" type="imagelistupload15" default="" label="Image 5" description="" directory="modules/mod_ppc_simple_spotlight/img" exclude="button-next\.png|button-prev\.png" stripext="0" />
+<param name="nolink5" type="radio" default="0" label="Hyperlink Image?" description="Add Link to image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</param>
+<param name="link5" type="text" default="" size="60" label="Link URL" description="Enter the complete url that should open when you click on this image." />
+<param name="window5" type="radio" default="_blank" label="Link Window" description="Open links in new window or same window?">
+<option value="_blank">New Window</option>
+<option value="_self">Same Window</option>
+</param>
+<param name="alt5" type="text" default="image"	label="Alt/Title"	description="alt and title tag for image" />
+
+<param name="@spacer6" type="spacer" default="&lt;div style=&quot;font-family:arial;font-size:15px;color:#fff; text-shadow:1px 1px 1px #333;padding:7px;margin:0;background:#828627;&quot;&gt;Image 6&lt;/div&gt;" />
+<param name="show6" type="radio" default="0" label="Show this Image?" description="Show image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</param>
+<param name="spotlightImage6" type="imagelistupload15" default="" label="Image 6" description="" directory="modules/mod_ppc_simple_spotlight/img" exclude="button-next\.png|button-prev\.png" stripext="0" />
+<param name="nolink6" type="radio" default="0" label="Hyperlink Image?" description="Add Link to image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</param>
+<param name="link6" type="text" default="" size="60" label="Link URL" description="Enter the complete url that should open when you click on this image." />
+<param name="window6" type="radio" default="_blank" label="Link Window" description="Open links in new window or same window?">
+<option value="_blank">New Window</option>
+<option value="_self">Same Window</option>
+</param>
+<param name="alt6" type="text" default="image"	label="Alt/Title"	description="alt and title tag for image" />
+
+<param name="@spacer7" type="spacer" default="&lt;div style=&quot;font-family:arial;font-size:15px;color:#fff; text-shadow:1px 1px 1px #333;padding:7px;margin:0;background:#828627;&quot;&gt;Image 7&lt;/div&gt;" />
+<param name="show7" type="radio" default="0" label="Show this Image?" description="Show image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</param>
+<param name="spotlightImage7" type="imagelistupload15" default="" label="Image 7" description="" directory="modules/mod_ppc_simple_spotlight/img" exclude="button-next\.png|button-prev\.png" stripext="0" />
+<param name="nolink7" type="radio" default="0" label="Hyperlink Image?" description="Add Link to image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</param>
+<param name="link7" type="text" default="" size="60" label="Link URL" description="Enter the complete url that should open when you click on this image." />
+<param name="window7" type="radio" default="_blank" label="Link Window" description="Open links in new window or same window?">
+<option value="_blank">New Window</option>
+<option value="_self">Same Window</option>
+</param>
+<param name="alt7" type="text" default="image"	label="Alt/Title"	description="alt and title tag for image" />
+
+<param name="@spacer8" type="spacer" default="&lt;div style=&quot;font-family:arial;font-size:15px;color:#fff; text-shadow:1px 1px 1px #333;padding:7px;margin:0;background:#828627;&quot;&gt;Image 8&lt;/div&gt;" />
+<param name="show8" type="radio" default="0" label="Show this Image?" description="Show image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</param>
+<param name="spotlightImage8" type="imagelistupload15" default="" label="Image 8" description="" directory="modules/mod_ppc_simple_spotlight/img" exclude="button-next\.png|button-prev\.png" stripext="0" />
+<param name="nolink8" type="radio" default="0" label="Hyperlink Image?" description="Add Link to image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</param>
+<param name="link8" type="text" default="" size="60" label="Link URL" description="Enter the complete url that should open when you click on this image." />
+<param name="window8" type="radio" default="_blank" label="Link Window" description="Open links in new window or same window?">
+<option value="_blank">New Window</option>
+<option value="_self">Same Window</option>
+</param>
+<param name="alt8" type="text" default="image"	label="Alt/Title"	description="alt and title tag for image" />
+
+<param name="@spacer9" type="spacer" default="&lt;div style=&quot;font-family:arial;font-size:15px;color:#fff; text-shadow:1px 1px 1px #333;padding:7px;margin:0;background:#828627;&quot;&gt;Image 9&lt;/div&gt;" />
+<param name="show9" type="radio" default="0" label="Show this Image?" description="Show image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</param>
+<param name="spotlightImage9" type="imagelistupload15" default="" label="Image 9" description="" directory="modules/mod_ppc_simple_spotlight/img" exclude="button-next\.png|button-prev\.png" stripext="0" />
+<param name="nolink9" type="radio" default="0" label="Hyperlink Image?" description="Add Link to image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</param>
+<param name="link9" type="text" default="" size="60" label="Link URL" description="Enter the complete url that should open when you click on this image." />
+<param name="window9" type="radio" default="_blank" label="Link Window" description="Open links in new window or same window?">
+<option value="_blank">New Window</option>
+<option value="_self">Same Window</option>
+</param>
+<param name="alt9" type="text" default="image"	label="Alt/Title"	description="alt and title tag for image" />
+
+<param name="@spacer10" type="spacer" default="&lt;div style=&quot;font-family:arial;font-size:15px;color:#fff; text-shadow:1px 1px 1px #333;padding:7px;margin:0;background:#828627;&quot;&gt;Image 10&lt;/div&gt;" />
+<param name="show10" type="radio" default="0" label="Show this Image?" description="Show image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</param>
+<param name="spotlightImage10" type="imagelistupload15" default="" label="Image 10" description="" directory="modules/mod_ppc_simple_spotlight/img" exclude="button-next\.png|button-prev\.png" stripext="0" />
+<param name="nolink10" type="radio" default="0" label="Hyperlink Image?" description="Add Link to image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</param>
+<param name="link10" type="text" default="" size="60" label="Link URL" description="Enter the complete url that should open when you click on this image." />
+<param name="window10" type="radio" default="_blank" label="Link Window" description="Open links in new window or same window?">
+<option value="_blank">New Window</option>
+<option value="_self">Same Window</option>
+</param>
+<param name="alt10" type="text" default="image"	label="Alt/Title"	description="alt and title tag for image" />
+
+<param type="panel" title="Image Setting 11-20" />
+
+<param name="@spacer11" type="spacer" default="&lt;div style=&quot;font-family:arial;font-size:15px;color:#fff; text-shadow:1px 1px 1px #333;padding:7px;margin:0;background:#828627;&quot;&gt;Image 11&lt;/div&gt;" />
+<param name="show11" type="radio" default="0" label="Show this Image?" description="Show image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</param>
+<param name="spotlightImage11" type="imagelistupload15" default="" label="Image 11" description="" directory="modules/mod_ppc_simple_spotlight/img" exclude="button-next\.png|button-prev\.png" stripext="0" />
+<param name="nolink11" type="radio" default="0" label="Hyperlink Image?" description="Add Link to image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</param>
+<param name="link11" type="text" default="" size="60" label="Link URL" description="Enter the complete url that should open when you click on this image." />
+<param name="window11" type="radio" default="_blank" label="Link Window" description="Open links in new window or same window?">
+<option value="_blank">New Window</option>
+<option value="_self">Same Window</option>
+</param>
+<param name="alt11" type="text" default="image"	label="Alt/Title"	description="alt and title tag for image" />
+
+<param name="@spacer12" type="spacer" default="&lt;div style=&quot;font-family:arial;font-size:15px;color:#fff; text-shadow:1px 1px 1px #333;padding:7px;margin:0;background:#828627;&quot;&gt;Image 12&lt;/div&gt;" />
+<param name="show12" type="radio" default="0" label="Show this Image?" description="Show image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</param>
+<param name="spotlightImage12" type="imagelistupload15" default="" label="Image 12" description="" directory="modules/mod_ppc_simple_spotlight/img" exclude="button-next\.png|button-prev\.png" stripext="0" />
+<param name="nolink12" type="radio" default="0" label="Hyperlink Image?" description="Add Link to image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</param>
+<param name="link12" type="text" default="" size="60" label="Link URL" description="Enter the complete url that should open when you click on this image." />
+<param name="window12" type="radio" default="_blank" label="Link Window" description="Open links in new window or same window?">
+<option value="_blank">New Window</option>
+<option value="_self">Same Window</option>
+</param>
+<param name="alt12" type="text" default="image"	label="Alt/Title"	description="alt and title tag for image" />
+
+<param name="@spacer13" type="spacer" default="&lt;div style=&quot;font-family:arial;font-size:15px;color:#fff; text-shadow:1px 1px 1px #333;padding:7px;margin:0;background:#828627;&quot;&gt;Image 13&lt;/div&gt;" />
+<param name="show13" type="radio" default="0" label="Show this Image?" description="Show image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</param>
+<param name="spotlightImage13" type="imagelistupload15" default="" label="Image 13" description="" directory="modules/mod_ppc_simple_spotlight/img" exclude="button-next\.png|button-prev\.png" stripext="0" />
+<param name="nolink13" type="radio" default="0" label="Hyperlink Image?" description="Add Link to image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</param>
+<param name="link13" type="text" default="" size="60" label="Link URL" description="Enter the complete url that should open when you click on this image." />
+<param name="window13" type="radio" default="_blank" label="Link Window" description="Open links in new window or same window?">
+<option value="_blank">New Window</option>
+<option value="_self">Same Window</option>
+</param>
+<param name="alt13" type="text" default="image"	label="Alt/Title"	description="alt and title tag for image" />
+
+<param name="@spacer14" type="spacer" default="&lt;div style=&quot;font-family:arial;font-size:15px;color:#fff; text-shadow:1px 1px 1px #333;padding:7px;margin:0;background:#828627;&quot;&gt;Image 14&lt;/div&gt;" />
+<param name="show14" type="radio" default="0" label="Show this Image?" description="Show image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</param>
+<param name="spotlightImage14" type="imagelistupload15" default="" label="Image 14" description="" directory="modules/mod_ppc_simple_spotlight/img" exclude="button-next\.png|button-prev\.png" stripext="0" />
+<param name="nolink14" type="radio" default="0" label="Hyperlink Image?" description="Add Link to image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</param>
+<param name="link14" type="text" default="" size="60" label="Link URL" description="Enter the complete url that should open when you click on this image." />
+<param name="window14" type="radio" default="_blank" label="Link Window" description="Open links in new window or same window?">
+<option value="_blank">New Window</option>
+<option value="_self">Same Window</option>
+</param>
+<param name="alt14" type="text" default="image"	label="Alt/Title"	description="alt and title tag for image" />
+
+<param name="@spacer15" type="spacer" default="&lt;div style=&quot;font-family:arial;font-size:15px;color:#fff; text-shadow:1px 1px 1px #333;padding:7px;margin:0;background:#828627;&quot;&gt;Image 15&lt;/div&gt;" />
+<param name="show15" type="radio" default="0" label="Show this Image?" description="Show image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</param>
+<param name="spotlightImage15" type="imagelistupload15" default="" label="Image 15" description="" directory="modules/mod_ppc_simple_spotlight/img" exclude="button-next\.png|button-prev\.png" stripext="0" />
+<param name="nolink15" type="radio" default="0" label="Hyperlink Image?" description="Add Link to image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</param>
+<param name="link15" type="text" default="" size="60" label="Link URL" description="Enter the complete url that should open when you click on this image." />
+<param name="window15" type="radio" default="_blank" label="Link Window" description="Open links in new window or same window?">
+<option value="_blank">New Window</option>
+<option value="_self">Same Window</option>
+</param>
+<param name="alt15" type="text" default="image"	label="Alt/Title"	description="alt and title tag for image" />
+
+<param name="@spacer16" type="spacer" default="&lt;div style=&quot;font-family:arial;font-size:15px;color:#fff; text-shadow:1px 1px 1px #333;padding:7px;margin:0;background:#828627;&quot;&gt;Image 16&lt;/div&gt;" />
+<param name="show16" type="radio" default="0" label="Show this Image?" description="Show image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</param>
+<param name="spotlightImage16" type="imagelistupload15" default="" label="Image 16" description="" directory="modules/mod_ppc_simple_spotlight/img" exclude="button-next\.png|button-prev\.png" stripext="0" />
+<param name="nolink16" type="radio" default="0" label="Hyperlink Image?" description="Add Link to image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</param>
+<param name="link16" type="text" default="" size="60" label="Link URL" description="Enter the complete url that should open when you click on this image." />
+<param name="window16" type="radio" default="_blank" label="Link Window" description="Open links in new window or same window?">
+<option value="_blank">New Window</option>
+<option value="_self">Same Window</option>
+</param>
+<param name="alt16" type="text" default="image"	label="Alt/Title"	description="alt and title tag for image" />
+
+<param name="@spacer17" type="spacer" default="&lt;div style=&quot;font-family:arial;font-size:15px;color:#fff; text-shadow:1px 1px 1px #333;padding:7px;margin:0;background:#828627;&quot;&gt;Image 17&lt;/div&gt;" />
+<param name="show17" type="radio" default="0" label="Show this Image?" description="Show image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</param>
+<param name="spotlightImage17" type="imagelistupload15" default="" label="Image 17" description="" directory="modules/mod_ppc_simple_spotlight/img" exclude="button-next\.png|button-prev\.png" stripext="0" />
+<param name="nolink17" type="radio" default="0" label="Hyperlink Image?" description="Add Link to image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</param>
+<param name="link17" type="text" default="" size="60" label="Link URL" description="Enter the complete url that should open when you click on this image." />
+<param name="window17" type="radio" default="_blank" label="Link Window" description="Open links in new window or same window?">
+<option value="_blank">New Window</option>
+<option value="_self">Same Window</option>
+</param>
+<param name="alt17" type="text" default="image"	label="Alt/Title"	description="alt and title tag for image" />
+
+<param name="@spacer18" type="spacer" default="&lt;div style=&quot;font-family:arial;font-size:15px;color:#fff; text-shadow:1px 1px 1px #333;padding:7px;margin:0;background:#828627;&quot;&gt;Image 18&lt;/div&gt;" />
+<param name="show18" type="radio" default="0" label="Show this Image?" description="Show image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</param>
+<param name="spotlightImage18" type="imagelistupload15" default="" label="Image 18" description="" directory="modules/mod_ppc_simple_spotlight/img" exclude="button-next\.png|button-prev\.png" stripext="0" />
+<param name="nolink18" type="radio" default="0" label="Hyperlink Image?" description="Add Link to image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</param>
+<param name="link18" type="text" default="" size="60" label="Link URL" description="Enter the complete url that should open when you click on this image." />
+<param name="window18" type="radio" default="_blank" label="Link Window" description="Open links in new window or same window?">
+<option value="_blank">New Window</option>
+<option value="_self">Same Window</option>
+</param>
+<param name="alt18" type="text" default="image"	label="Alt/Title"	description="alt and title tag for image" />
+
+<param name="@spacer19" type="spacer" default="&lt;div style=&quot;font-family:arial;font-size:15px;color:#fff; text-shadow:1px 1px 1px #333;padding:7px;margin:0;background:#828627;&quot;&gt;Image 19&lt;/div&gt;" />
+<param name="show19" type="radio" default="0" label="Show this Image?" description="Show image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</param>
+<param name="spotlightImage19" type="imagelistupload15" default="" label="Image 19" description="" directory="modules/mod_ppc_simple_spotlight/img" exclude="button-next\.png|button-prev\.png" stripext="0" />
+<param name="nolink19" type="radio" default="0" label="Hyperlink Image?" description="Add Link to image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</param>
+<param name="link19" type="text" default="" size="60" label="Link URL" description="Enter the complete url that should open when you click on this image." />
+<param name="window19" type="radio" default="_blank" label="Link Window" description="Open links in new window or same window?">
+<option value="_blank">New Window</option>
+<option value="_self">Same Window</option>
+</param>
+<param name="alt19" type="text" default="image"	label="Alt/Title"	description="alt and title tag for image" />
+
+<param name="@spacer20" type="spacer" default="&lt;div style=&quot;font-family:arial;font-size:15px;color:#fff; text-shadow:1px 1px 1px #333;padding:7px;margin:0;background:#828627;&quot;&gt;Image 20&lt;/div&gt;" />
+<param name="show20" type="radio" default="0" label="Show this Image?" description="Show image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</param>
+<param name="spotlightImage20" type="imagelistupload15" default="" label="Image 20" description="" directory="modules/mod_ppc_simple_spotlight/img" exclude="button-next\.png|button-prev\.png" stripext="0" />
+<param name="nolink20" type="radio" default="0" label="Hyperlink Image?" description="Add Link to image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</param>
+<param name="link20" type="text" default="" size="60" label="Link URL" description="Enter the complete url that should open when you click on this image." />
+<param name="window20" type="radio" default="_blank" label="Link Window" description="Open links in new window or same window?">
+<option value="_blank">New Window</option>
+<option value="_self">Same Window</option>
+</param>
+<param name="alt20" type="text" default="image"	label="Alt/Title"	description="alt and title tag for image" />
+
+<param type="panel" title="Advanced" />
+
+<param name="@spacer21" type="spacer" default="&lt;div style=&quot;font-family:arial;font-size:15px;color:#fff; text-shadow:1px 1px 1px #333;padding:7px;margin:0;background:#828627;&quot;&gt;Advanced&lt;/div&gt;" />
+
+<param name="jquery" type="radio" default="1" label="Include jQuery Library" description="Include jQuery Library">
+     		<option value="1">Yes</option>
+		<option value="0">No</option>
+	</param>
+		<param name="cache" type="list" default="0" label="Caching" description="Caching">
+			<option value="1">Use Cache</option>
+			<option value="0">Do not use Cache</option>
+		</param>
+		   <param name="cache_time" type="text" default="300" label="Cache time" description="Cache time" />		
+		<param name="note" type="textarea" cols="50" rows="10" default="" label="Notes" description=""/>
+		
+		<param type="panels" />	
+	</params>
+
+
+
+<config>
+	<fields name="params">		   
+	   <fieldset name="General Setting" label="General Setting"  addfieldpath="/modules/mod_ppc_simple_spotlight/elements/">	 
+	   <field label="Version Check" type="upgradecheck" />
+	
+<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="Module Class Suffix"></field>
+<field name="width" type="text" default="910" label="Width" description="Specify width" />
+<field name="height" type="text" default="258" label="Height" description="Specify height" />
+
+<field name="effect" type="list"	label="Effect"	description="Effect"	default="toss"	>
+<option value="fade">Fade</option>
+<option value="fadeZoom">Fade Zoom</option>
+<option value="zoom">Zoom</option>
+<option value="shuffle">Shuffle</option>
+<option value="toss">Toss</option>
+<option value="wipe">Wipe</option>
+<option value="cover">Cover</option>
+<option value="uncover">Uncover</option>
+<option value="blindX">Blind X</option>
+<option value="blindY">Blind Y</option>
+<option value="blindZ">Blind Z</option>
+<option value="growY">Grow Y</option>
+<option value="curtainX">Curtain X</option>
+<option value="curtainY">Curtain Y</option>
+<option value="slideX">Slide X</option>
+<option value="slideY">Slide Y</option>
+<option value="turnUp">Turn Up</option>
+<option value="turnDown">Turn Down</option>
+<option value="turnLeft">Turn Left</option>
+<option value="turnRight">Turn Right</option>
+<option value="scrollRight">Scroll Right</option>
+<option value="scrollLeft">Scroll Left</option>
+<option value="scrollUp">Scroll Up</option>
+<option value="scrollDown">Scroll Down</option>
+<option value="all">Random</option>
+				
+		    </field>
+            <field name="play" type="list"	label="Auto Start"	description=""	default="1"	>
+				<option value="1">Yes</option>
+                <option value="0">No</option>
+		    </field>
+            <field name="slideshow_speed" type="text" default="800"	label="Animation Duration"	description="Animation Duration" />
+            <field name="timer_speed" type="text" default="5000"	label="Interval"		description="Interval" />
+<field name="random" type="radio" default="1" label="Random" description="Random rotation.">
+    <option value="0">No</option>
+    <option value="1">Yes</option>
+</field>
+<field name="nav" type="radio" default="1" label="Navigation Buttons" description="Show/Hide Navigation Buttons">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</field>
+<field name="buttons" type="radio" default="right" label="Buttons Position" description="Where do buttons appear?">
+        <option value="left">Left</option>
+        <option value="right">Right</option>
+<option value="center">Center</option> 
+    </field>
+	</fieldset>
+	
+	
+<fieldset name="Image Settings" label="Image Settings 1-10"> 
+<field name="spacer1" type="spacer" label="&lt;div style=&quot;float:right;width:100%;font-family:arial;font-size:15px;color:#fff; text-shadow:1px 1px 1px #333;padding:7px;margin:0;background:#828627;&quot;&gt;Image 1&lt;/div&gt;" />
+<field name="show1" type="radio" default="1" label="Show this Image?" description="Show image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</field>
+<field name="spotlightImage" type="imagelistupload" default="banner1.jpg" label="Image 1" description="" directory="modules/mod_ppc_simple_spotlight/img" exclude="button-next\.png|button-prev\.png" stripext="0" />
+<field name="nolink" type="radio" default="0" label="Hyperlink Image?" description="Add Link to image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</field>
+<field name="link" type="text" default="" size="60" label="Link URL" description="Enter the complete url that should open when you click on this image." />
+<field name="window" type="radio" default="_blank" label="Link Window" description="Open links in new window or same window?">
+<option value="_blank">New Window</option>
+<option value="_self">Same Window</option>
+</field>
+<field name="alt" type="text" default="image"	label="Alt/Title"	description="alt and title tag for image" />
+
+<field name="spacer2" type="spacer" label="&lt;div style=&quot;float:right;width:100%;font-family:arial;font-size:15px;color:#fff; text-shadow:1px 1px 1px #333;padding:7px;margin:0;background:#828627;&quot;&gt;Image 2&lt;/div&gt;" />
+<field name="show2" type="radio" default="1" label="Show this Image?" description="Show image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</field>
+<field name="spotlightImage2" type="imagelistupload" default="banner2.jpg" label="Image 2" description="" directory="modules/mod_ppc_simple_spotlight/img" exclude="button-next\.png|button-prev\.png" stripext="0" />
+<field name="nolink2" type="radio" default="0" label="Hyperlink Image?" description="Add Link to image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</field>
+<field name="link2" type="text" default="" size="60" label="Link URL" description="Enter the complete url that should open when you click on this image." />
+<field name="window2" type="radio" default="_blank" label="Link Window" description="Open links in new window or same window?">
+<option value="_blank">New Window</option>
+<option value="_self">Same Window</option>
+</field>
+<field name="alt2" type="text" default="image"	label="Alt/Title"	description="alt and title tag for image" />
+
+<field name="spacer3" type="spacer" label="&lt;div style=&quot;float:right;width:100%;font-family:arial;font-size:15px;color:#fff; text-shadow:1px 1px 1px #333;padding:7px;margin:0;background:#828627;&quot;&gt;Image 3&lt;/div&gt;" />
+<field name="show3" type="radio" default="1" label="Show this Image?" description="Show image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</field>
+<field name="spotlightImage3" type="imagelistupload" default="banner3.jpg" label="Image 3" description="" directory="modules/mod_ppc_simple_spotlight/img" exclude="button-next\.png|button-prev\.png" stripext="0" />
+<field name="nolink3" type="radio" default="0" label="Hyperlink Image?" description="Add Link to image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</field>
+<field name="link3" type="text" default="" size="60" label="Link URL" description="Enter the complete url that should open when you click on this image." />
+<field name="window3" type="radio" default="_blank" label="Link Window" description="Open links in new window or same window?">
+<option value="_blank">New Window</option>
+<option value="_self">Same Window</option>
+</field>
+<field name="alt3" type="text" default="image"	label="Alt/Title"	description="alt and title tag for image" />
+
+<field name="spacer4" type="spacer" label="&lt;div style=&quot;float:right;width:100%;font-family:arial;font-size:15px;color:#fff; text-shadow:1px 1px 1px #333;padding:7px;margin:0;background:#828627;&quot;&gt;Image 4&lt;/div&gt;" />
+<field name="show4" type="radio" default="0" label="Show this Image?" description="Show image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</field>
+<field name="spotlightImage4" type="imagelistupload" default="" label="Image 4" description="" directory="modules/mod_ppc_simple_spotlight/img" exclude="button-next\.png|button-prev\.png" stripext="0" />
+<field name="nolink4" type="radio" default="0" label="Hyperlink Image?" description="Add Link to image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</field>
+<field name="link4" type="text" default="" size="60" label="Link URL" description="Enter the complete url that should open when you click on this image." />
+<field name="window4" type="radio" default="_blank" label="Link Window" description="Open links in new window or same window?">
+<option value="_blank">New Window</option>
+<option value="_self">Same Window</option>
+</field>
+<field name="alt4" type="text" default="image"	label="Alt/Title"	description="alt and title tag for image" />
+
+<field name="spacer5" type="spacer" label="&lt;div style=&quot;float:right;width:100%;font-family:arial;font-size:15px;color:#fff; text-shadow:1px 1px 1px #333;padding:7px;margin:0;background:#828627;&quot;&gt;Image 5&lt;/div&gt;" />
+<field name="show5" type="radio" default="0" label="Show this Image?" description="Show image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</field>
+<field name="spotlightImage5" type="imagelistupload" default="" label="Image 5" description="" directory="modules/mod_ppc_simple_spotlight/img" exclude="button-next\.png|button-prev\.png" stripext="0" />
+<field name="nolink5" type="radio" default="0" label="Hyperlink Image?" description="Add Link to image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</field>
+<field name="link5" type="text" default="" size="60" label="Link URL" description="Enter the complete url that should open when you click on this image." />
+<field name="window5" type="radio" default="_blank" label="Link Window" description="Open links in new window or same window?">
+<option value="_blank">New Window</option>
+<option value="_self">Same Window</option>
+</field>
+<field name="alt5" type="text" default="image"	label="Alt/Title"	description="alt and title tag for image" />
+
+<field name="spacer6" type="spacer" label="&lt;div style=&quot;float:right;width:100%;font-family:arial;font-size:15px;color:#fff; text-shadow:1px 1px 1px #333;padding:7px;margin:0;background:#828627;&quot;&gt;Image 6&lt;/div&gt;" />
+<field name="show6" type="radio" default="0" label="Show this Image?" description="Show image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</field>
+<field name="spotlightImage6" type="imagelistupload" default="" label="Image 6" description="" directory="modules/mod_ppc_simple_spotlight/img" exclude="button-next\.png|button-prev\.png" stripext="0" />
+<field name="nolink6" type="radio" default="0" label="Hyperlink Image?" description="Add Link to image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</field>
+<field name="link6" type="text" default="" size="60" label="Link URL" description="Enter the complete url that should open when you click on this image." />
+<field name="window6" type="radio" default="_blank" label="Link Window" description="Open links in new window or same window?">
+<option value="_blank">New Window</option>
+<option value="_self">Same Window</option>
+</field>
+<field name="alt6" type="text" default="image"	label="Alt/Title"	description="alt and title tag for image" />
+
+<field name="spacer7" type="spacer" label="&lt;div style=&quot;float:right;width:100%;font-family:arial;font-size:15px;color:#fff; text-shadow:1px 1px 1px #333;padding:7px;margin:0;background:#828627;&quot;&gt;Image 7&lt;/div&gt;" />
+<field name="show7" type="radio" default="0" label="Show this Image?" description="Show image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</field>
+<field name="spotlightImage7" type="imagelistupload" default="" label="Image 7" description="" directory="modules/mod_ppc_simple_spotlight/img" exclude="button-next\.png|button-prev\.png" stripext="0" />
+<field name="nolink7" type="radio" default="0" label="Hyperlink Image?" description="Add Link to image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</field>
+<field name="link7" type="text" default="" size="60" label="Link URL" description="Enter the complete url that should open when you click on this image." />
+<field name="window7" type="radio" default="_blank" label="Link Window" description="Open links in new window or same window?">
+<option value="_blank">New Window</option>
+<option value="_self">Same Window</option>
+</field>
+<field name="alt7" type="text" default="image"	label="Alt/Title" description="alt and title tag for image" />
+
+<field name="spacer8" type="spacer" label="&lt;div style=&quot;float:right;width:100%;font-family:arial;font-size:15px;color:#fff; text-shadow:1px 1px 1px #333;padding:7px;margin:0;background:#828627;&quot;&gt;Image 8&lt;/div&gt;" />
+
+<field name="show8" type="radio" default="0" label="Show this Image?" description="Show image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</field><field name="spotlightImage8" type="imagelistupload" default="" label="Image 8" description="" directory="modules/mod_ppc_simple_spotlight/img" exclude="button-next\.png|button-prev\.png" stripext="0" />
+<field name="nolink8" type="radio" default="0" label="Hyperlink Image?" description="Add Link to image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</field>
+<field name="link8" type="text" default="" size="60" label="Link URL" description="Enter the complete url that should open when you click on this image." />
+<field name="window8" type="radio" default="_blank" label="Link Window" description="Open links in new window or same window?">
+<option value="_blank">New Window</option>
+<option value="_self">Same Window</option>
+</field>
+<field name="alt8" type="text" default="image"	label="Alt/Title"	description="alt and title tag for image" />
+
+<field name="spacer9" type="spacer" label="&lt;div style=&quot;float:right;width:100%;font-family:arial;font-size:15px;color:#fff; text-shadow:1px 1px 1px #333;padding:7px;margin:0;background:#828627;&quot;&gt;Image 9&lt;/div&gt;" />
+<field name="show9" type="radio" default="0" label="Show this Image?" description="Show image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</field>
+<field name="spotlightImage9" type="imagelistupload" default="" label="Image 9" description="" directory="modules/mod_ppc_simple_spotlight/img" exclude="button-next\.png|button-prev\.png" stripext="0" />
+<field name="nolink9" type="radio" default="0" label="Hyperlink Image?" description="Add Link to image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</field>
+<field name="link9" type="text" default="" size="60" label="Link URL" description="Enter the complete url that should open when you click on this image." />
+<field name="window9" type="radio" default="_blank" label="Link Window" description="Open links in new window or same window?">
+<option value="_blank">New Window</option>
+<option value="_self">Same Window</option>
+</field>
+<field name="alt9" type="text" default="image"	label="Alt/Title"	description="alt and title tag for image" />
+
+<field name="spacer10" type="spacer" label="&lt;div style=&quot;float:right;width:100%;font-family:arial;font-size:15px;color:#fff; text-shadow:1px 1px 1px #333;padding:7px;margin:0;background:#828627;&quot;&gt;Image 10&lt;/div&gt;" />
+<field name="show10" type="radio" default="0" label="Show this Image?" description="Show image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</field>
+<field name="spotlightImage10" type="imagelistupload" default="" label="Image 10" description="" directory="modules/mod_ppc_simple_spotlight/img" exclude="button-next\.png|button-prev\.png" stripext="0" />
+<field name="nolink10" type="radio" default="0" label="Hyperlink Image?" description="Add Link to image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</field>
+<field name="link10" type="text" default="" size="60" label="Link URL" description="Enter the complete url that should open when you click on this image." />
+<field name="window10" type="radio" default="_blank" label="Link Window" description="Open links in new window or same window?">
+<option value="_blank">New Window</option>
+<option value="_self">Same Window</option>
+</field>
+<field name="alt10" type="text" default="image"	label="Alt/Title"	description="alt and title tag for image" />
+</fieldset>   
+
+<fieldset name="Image Settings2" label="Image Settings 11-20">
+
+<field name="spacer11" type="spacer" label="&lt;div style=&quot;float:right;width:100%;font-family:arial;font-size:15px;color:#fff; text-shadow:1px 1px 1px #333;padding:7px;margin:0;background:#828627;&quot;&gt;Image 11&lt;/div&gt;" />
+<field name="show11" type="radio" default="0" label="Show this Image?" description="Show image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</field>
+<field name="spotlightImage11" type="imagelistupload" default="" label="Image 11" description="" directory="modules/mod_ppc_simple_spotlight/img" exclude="button-next\.png|button-prev\.png" stripext="0" />
+<field name="nolink11" type="radio" default="0" label="Hyperlink Image?" description="Add Link to image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</field>
+<field name="link11" type="text" default="" size="60" label="Link URL" description="Enter the complete url that should open when you click on this image." />
+<field name="window11" type="radio" default="_blank" label="Link Window" description="Open links in new window or same window?">
+<option value="_blank">New Window</option>
+<option value="_self">Same Window</option>
+</field>
+<field name="alt11" type="text" default="image"	label="Alt/Title"	description="alt and title tag for image" />
+
+<field name="spacer12" type="spacer" label="&lt;div style=&quot;float:right;width:100%;font-family:arial;font-size:15px;color:#fff; text-shadow:1px 1px 1px #333;padding:7px;margin:0;background:#828627;&quot;&gt;Image 12&lt;/div&gt;" />
+<field name="show12" type="radio" default="0" label="Show this Image?" description="Show image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</field>
+<field name="spotlightImage12" type="imagelistupload" default="" label="Image 12" description="" directory="modules/mod_ppc_simple_spotlight/img" exclude="button-next\.png|button-prev\.png" stripext="0" />
+<field name="nolink12" type="radio" default="0" label="Hyperlink Image?" description="Add Link to image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</field>
+<field name="link12" type="text" default="" size="60" label="Link URL" description="Enter the complete url that should open when you click on this image." />
+<field name="window12" type="radio" default="_blank" label="Link Window" description="Open links in new window or same window?">
+<option value="_blank">New Window</option>
+<option value="_self">Same Window</option>
+</field>
+<field name="alt12" type="text" default="image"	label="Alt/Title"	description="alt and title tag for image" />
+
+<field name="spacer13" type="spacer" label="&lt;div style=&quot;float:right;width:100%;font-family:arial;font-size:15px;color:#fff; text-shadow:1px 1px 1px #333;padding:7px;margin:0;background:#828627;&quot;&gt;Image 13&lt;/div&gt;" />
+<field name="show13" type="radio" default="0" label="Show this Image?" description="Show image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</field>
+<field name="spotlightImage13" type="imagelistupload" default="" label="Image 13" description="" directory="modules/mod_ppc_simple_spotlight/img" exclude="button-next\.png|button-prev\.png" stripext="0" />
+<field name="nolink13" type="radio" default="0" label="Hyperlink Image?" description="Add Link to image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</field>
+<field name="link13" type="text" default="" size="60" label="Link URL" description="Enter the complete url that should open when you click on this image." />
+<field name="window13" type="radio" default="_blank" label="Link Window" description="Open links in new window or same window?">
+<option value="_blank">New Window</option>
+<option value="_self">Same Window</option>
+</field>
+<field name="alt13" type="text" default="image"	label="Alt/Title"	description="alt and title tag for image" />
+
+<field name="spacer14" type="spacer" label="&lt;div style=&quot;float:right;width:100%;font-family:arial;font-size:15px;color:#fff; text-shadow:1px 1px 1px #333;padding:7px;margin:0;background:#828627;&quot;&gt;Image 14&lt;/div&gt;" />
+<field name="show14" type="radio" default="0" label="Show this Image?" description="Show image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</field>
+<field name="spotlightImage14" type="imagelistupload" default="" label="Image 14" description="" directory="modules/mod_ppc_simple_spotlight/img" exclude="button-next\.png|button-prev\.png" stripext="0" />
+<field name="nolink14" type="radio" default="0" label="Hyperlink Image?" description="Add Link to image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</field>
+<field name="link14" type="text" default="" size="60" label="Link URL" description="Enter the complete url that should open when you click on this image." />
+<field name="window14" type="radio" default="_blank" label="Link Window" description="Open links in new window or same window?">
+<option value="_blank">New Window</option>
+<option value="_self">Same Window</option>
+</field>
+<field name="alt14" type="text" default="image"	label="Alt/Title"	description="alt and title tag for image" />
+
+<field name="spacer15" type="spacer" label="&lt;div style=&quot;float:right;width:100%;font-family:arial;font-size:15px;color:#fff; text-shadow:1px 1px 1px #333;padding:7px;margin:0;background:#828627;&quot;&gt;Image 15&lt;/div&gt;" />
+<field name="show15" type="radio" default="0" label="Show this Image?" description="Show image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</field>
+<field name="spotlightImage15" type="imagelistupload" default="" label="Image 15" description="" directory="modules/mod_ppc_simple_spotlight/img" exclude="button-next\.png|button-prev\.png" stripext="0" />
+<field name="nolink15" type="radio" default="0" label="Hyperlink Image?" description="Add Link to image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</field>
+<field name="link15" type="text" default="" size="60" label="Link URL" description="Enter the complete url that should open when you click on this image." />
+<field name="window15" type="radio" default="_blank" label="Link Window" description="Open links in new window or same window?">
+<option value="_blank">New Window</option>
+<option value="_self">Same Window</option>
+</field>
+<field name="alt15" type="text" default="image"	label="Alt/Title"	description="alt and title tag for image" />
+
+<field name="spacer16" type="spacer" label="&lt;div style=&quot;float:right;width:100%;font-family:arial;font-size:16px;color:#fff; text-shadow:1px 1px 1px #333;padding:7px;margin:0;background:#828627;&quot;&gt;Image 16&lt;/div&gt;" />
+<field name="show16" type="radio" default="0" label="Show this Image?" description="Show image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</field>
+<field name="spotlightImage16" type="imagelistupload" default="" label="Image 16" description="" directory="modules/mod_ppc_simple_spotlight/img" exclude="button-next\.png|button-prev\.png" stripext="0" />
+<field name="nolink16" type="radio" default="0" label="Hyperlink Image?" description="Add Link to image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</field>
+<field name="link16" type="text" default="" size="60" label="Link URL" description="Enter the complete url that should open when you click on this image." />
+<field name="window16" type="radio" default="_blank" label="Link Window" description="Open links in new window or same window?">
+<option value="_blank">New Window</option>
+<option value="_self">Same Window</option>
+</field>
+<field name="alt16" type="text" default="image"	label="Alt/Title"	description="alt and title tag for image" />
+
+<field name="spacer17" type="spacer" label="&lt;div style=&quot;float:right;width:100%;font-family:arial;font-size:17px;color:#fff; text-shadow:1px 1px 1px #333;padding:7px;margin:0;background:#828627;&quot;&gt;Image 17&lt;/div&gt;" />
+<field name="show17" type="radio" default="0" label="Show this Image?" description="Show image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</field>
+<field name="spotlightImage17" type="imagelistupload" default="" label="Image 17" description="" directory="modules/mod_ppc_simple_spotlight/img" exclude="button-next\.png|button-prev\.png" stripext="0" />
+<field name="nolink17" type="radio" default="0" label="Hyperlink Image?" description="Add Link to image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</field>
+<field name="link17" type="text" default="" size="60" label="Link URL" description="Enter the complete url that should open when you click on this image." />
+<field name="window17" type="radio" default="_blank" label="Link Window" description="Open links in new window or same window?">
+<option value="_blank">New Window</option>
+<option value="_self">Same Window</option>
+</field>
+<field name="alt17" type="text" default="image"	label="Alt/Title"	description="alt and title tag for image" />
+
+<field name="spacer18" type="spacer" label="&lt;div style=&quot;float:right;width:100%;font-family:arial;font-size:18px;color:#fff; text-shadow:1px 1px 1px #333;padding:7px;margin:0;background:#828627;&quot;&gt;Image 18&lt;/div&gt;" />
+<field name="show18" type="radio" default="0" label="Show this Image?" description="Show image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</field>
+<field name="spotlightImage18" type="imagelistupload" default="" label="Image 18" description="" directory="modules/mod_ppc_simple_spotlight/img" exclude="button-next\.png|button-prev\.png" stripext="0" />
+<field name="nolink18" type="radio" default="0" label="Hyperlink Image?" description="Add Link to image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</field>
+<field name="link18" type="text" default="" size="60" label="Link URL" description="Enter the complete url that should open when you click on this image." />
+<field name="window18" type="radio" default="_blank" label="Link Window" description="Open links in new window or same window?">
+<option value="_blank">New Window</option>
+<option value="_self">Same Window</option>
+</field>
+<field name="alt18" type="text" default="image"	label="Alt/Title"	description="alt and title tag for image" />
+
+<field name="spacer19" type="spacer" label="&lt;div style=&quot;float:right;width:100%;font-family:arial;font-size:19px;color:#fff; text-shadow:1px 1px 1px #333;padding:7px;margin:0;background:#828627;&quot;&gt;Image 19&lt;/div&gt;" />
+<field name="show19" type="radio" default="0" label="Show this Image?" description="Show image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</field>
+<field name="spotlightImage19" type="imagelistupload" default="" label="Image 19" description="" directory="modules/mod_ppc_simple_spotlight/img" exclude="button-next\.png|button-prev\.png" stripext="0" />
+<field name="nolink19" type="radio" default="0" label="Hyperlink Image?" description="Add Link to image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</field>
+<field name="link19" type="text" default="" size="60" label="Link URL" description="Enter the complete url that should open when you click on this image." />
+<field name="window19" type="radio" default="_blank" label="Link Window" description="Open links in new window or same window?">
+<option value="_blank">New Window</option>
+<option value="_self">Same Window</option>
+</field>
+<field name="alt19" type="text" default="image"	label="Alt/Title"	description="alt and title tag for image" />
+
+<field name="spacer20" type="spacer" label="&lt;div style=&quot;float:right;width:100%;font-family:arial;font-size:20px;color:#fff; text-shadow:1px 1px 1px #333;padding:7px;margin:0;background:#828627;&quot;&gt;Image 20&lt;/div&gt;" />
+<field name="show20" type="radio" default="0" label="Show this Image?" description="Show image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</field>
+<field name="spotlightImage20" type="imagelistupload" default="" label="Image 20" description="" directory="modules/mod_ppc_simple_spotlight/img" exclude="button-next\.png|button-prev\.png" stripext="0" />
+<field name="nolink20" type="radio" default="0" label="Hyperlink Image?" description="Add Link to image?">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</field>
+<field name="link20" type="text" default="" size="60" label="Link URL" description="Enter the complete url that should open when you click on this image." />
+<field name="window20" type="radio" default="_blank" label="Link Window" description="Open links in new window or same window?">
+<option value="_blank">New Window</option>
+<option value="_self">Same Window</option>
+</field>
+<field name="alt20" type="text" default="image"	label="Alt/Title"	description="alt and title tag for image" />
+
+</fieldset>  
+
+	   <fieldset name="advance" label="Advanced">
+	   <field name="jquery" type="radio" default="1" label="Include jQuery Library" description="Include jQuery Library">
+     		<option value="1">Yes</option>
+		<option value="0">No</option>
+	</field>
+		<field name="cache" type="list" default="0" label="Caching" description="Caching">
+			<option value="1">Use Cache</option>
+			<option value="0">Do not use Cache</option>
+		</field>
+		   <field name="cache_time" type="text" default="300" label="Cache time" description="Cache time" />		
+		<field name="note" type="textarea" cols="50" rows="10" default="" label="Notes" description=""/>
+</fieldset>
+	</fields>
+	</config>
+</install>

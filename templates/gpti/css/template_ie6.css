@@ -1,0 +1,30 @@
+/**
+ * @version		$Id: template_ie6.css 2010-07-22 sgarcia $
+ * @package		Joomla
+ * @subpackage	DO
+ * @autor		Diseño Objetivo www.do.cl
+ * @copyright	Copyright (C) 2006 - 2010 Diseño Objetivo. Todos los derechos reservados.
+ * @license		LICENCIA_DO.php
+ */
+
+	/**************************************/
+	/*                                    */
+	/*          Diseño Objetivo           */
+	/*       www.do.cl / info@do.cl       */
+	/*      Fono: (56-02) 228 13 91       */
+	/*                                    */
+	/**************************************/
+	
+	
+.gpti_ms						{ height:35px;  }
+.gpti_login_int	div				{ width:115px; }
+
+/* Tooltips */
+.tool-tip 						{ float:left; background:#FFF; border:1px solid #F00; padding:5px; width:280px;  }
+.tool-title 					{ padding:0px; color:#666; margin:0px; font-size:12px; font-weight:bold; margin-top:0px; padding-top:15px; padding-bottom:5px; background:url(../imagenes/selector-arrow.png) no-repeat;}
+.tool-text 						{ font-size:12px; margin:0px; color:#999;  }
+.hasTip 						{ position:relative;  top:-45px; left:-420px; }
+
+td.gpti_informacion .inputfile	{ width:400px; }
+
+

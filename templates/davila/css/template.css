@@ -1,0 +1,444 @@
+/**
+ * @version		$Id: template.css 2010-07-22 sgarcia $
+ * @package		Joomla
+ * @subpackage	DO
+ * @autor		Diseño Objetivo www.do.cl
+ * @copyright	Copyright (C) 2006 - 2010 Diseño Objetivo. Todos los derechos reservados.
+ * @license		LICENCIA_DO.php
+ */
+
+	/**************************************/
+	/*                                    */
+	/*          Diseño Objetivo           */
+	/*       www.do.cl / info@do.cl       */
+	/*      Fono: (56-02) 228 13 91       */
+	/*                                    */
+	/**************************************/
+	
+body						{ background-color:#BFBFBF; font-family:Arial, Helvetica, sans-serif; }
+
+a							{ text-decoration:none; }
+a:hover						{ text-decoration:underline; }
+
+.contenedor_inicio			{ background-color:#FFF; width:100%; }
+.contenedor_encabezado		{ /*margin-top:30px;*/ }
+.contenedor_multibanner		{ margin-top:15px; }
+.contenedor_boxsdestacadas	{ overflow:hidden; }
+.contenedor_faq				{ padding:20px 0px; }
+.contenedor_boxshome		{ overflow:hidden; width:944px; }
+.contenedor_pie				{ background-color:#BFBFBF; }
+.contenedor_chat			{ }
+.contenedor_contenido		{ background-image:url(../imagenes/contenido_bg.jpg); background-repeat:repeat-x; background-color:#F2F2F2; width:100%;}
+.contenedor_box_contenido	{ margin:18px 20px 12px 20px; width:1020px; overflow:hidden; }
+.contenedor_componente		{ /*margin:16px 38px;*/ width:710px; float:left; overflow:hidden; }
+.contenedor_componente2		{ /*margin:16px 38px;*/ width:944px; float:left; overflow:hidden; }
+.contenedor_derecho			{ float:left; width:204px; margin:45px 0px 0px 30px; overflow:hidden; }
+.contenedor_inferior		{ padding-top:20px; width:944px; overflow:hidden; }
+.contenedor_inferior_contenido		{ padding-top:20px; width:710px; overflow:hidden; }
+.contenedor_inferior_contenido2		{ padding-top:20px; width:944px; overflow:hidden; }
+
+table.encabezado td.menu_principal		{ padding-top:30px; }
+
+.menu_suphome				{ overflow:hidden; padding-top:5px; }
+.menu_suphome,
+table.menu_suphome,
+table.menu_suphome ul li	{ color:#CCC; font-size:11px; }
+.menu_suphome a,
+.menu_suphome a:hover		{ color:#666; font-size:11px; margin-left:8px; }
+.menu_suphome a:hover		{ text-decoration:none; }
+
+.menu_suphome a.diferente,
+.menu_suphome a.diferente:hover	{ color:#169CBB; margin:0px; background-image:url(../../../images/stories/menu_contacto.jpg); background-position:right; background-repeat:no-repeat; padding-right:18px; }
+
+.menu_suphome					{ overflow:hidden; /*width:200px;*/ }
+.menu_suphome ul				{ margin:0px; padding:0px; list-style:none; display:inline; }
+.menu_suphome ul li				{ display:block; float:left; }
+.menu_suphome div.submenu		{ position:absolute; width:100px; z-index:1000; text-align:left; border-top:1px solid #ECECEC; background-color:#FFF; }
+.menu_suphome div.submenu span	{ display:block; text-align:left; border-bottom:1px solid #ECECEC; height:20px; line-height:20px; }
+
+.menu_supcontenido				{ overflow:hidden; /*width:694px;*/ }
+.menu_supcontenido a,
+.menu_supcontenido a:hover		{ color:#666; font-size:12px; margin-left:8px; }
+.menu_supcontenido a.activo		{ color:#DC0519; }
+
+.menu_principal							{ overflow:hidden; width:794px; }
+.menu_principal a,
+.menu_principal a:hover					{ color:#666; font-size:12px; padding-left:15px; padding-right: 15px; }
+.menu_principal a:hover					{ text-decoration:none; }
+.menu_principal a.activo				{ color:#DC0519; }
+.menu_principal ul						{ margin:0px; padding:0px; list-style:none; display:inline; float:right; text-align:left; }
+.menu_principal ul li					{ display:block; float:left; }
+.menu_principal div.submenu				{ position:absolute; width:120px; z-index:1000; text-align:left; /*border-top:1px solid #ECECEC;*/ background-color:#FFF; padding-top: 15px; }
+.menu_principal div.submenu span		{ display:block; text-align:left; border-top:1px solid #ECECEC; height:20px; line-height:20px; padding-top: 4px; padding-bottom: 4px; }
+.menu_principal div.submenu span a,
+.menu_principal div.submenu span a:hover{ margin-left:8px; padding-right: 0px; padding-left: 0px; }
+
+
+.contenedor_boxsdestacadas .box		{ width:313px; float:left; height:93px; background-image:url(../imagenes/boxsdestacadas_bg.jpg); background-repeat:repeat-x; }
+.contenedor_boxsdestacadas .tit		{ font-size:13px; color:#333; }
+.contenedor_boxsdestacadas .txt		{ font-size:11px; color:#666; padding:5px 0px; }
+.contenedor_boxsdestacadas .link a,
+.contenedor_boxsdestacadas .link a:hover	{ font-size:11px; color:#333; }
+
+a.boxs_link,
+a.boxs_link:hover							{ font-size:11px; color:#333; text-decoration:none; }
+a.boxs_link:hover							{ text-decoration:underline; }
+
+div.box_contenido			{ background-color:#FFF; /*padding:10px;*/ }
+div.box_contenido_t			{ width:100%; /*background: url(../imagenes/boxs/box_t.jpg) 0 0 repeat-x;*/ background-color:#FFF; }
+div.box_contenido_b			{ width:100%; /*background: url(../imagenes/boxs/box_b.jpg) 0 100% repeat-x;*/ background-color:#FFF; }
+
+div.box_contenido_top		{ height:10px; background-image:url(../imagenes/box_contenido_top.gif); background-repeat:no-repeat; width:1020px; }
+div.box_contenido_bottom	{ height:10px; background-image:url(../imagenes/box_contenido_bottom.gif); background-repeat:no-repeat; width:1020px; }
+div.box_contenido_main		{ background-color:#FFF; width:944px; padding:16px 38px; overflow:hidden; }
+
+table.pestanas							{ }
+table.pestanas td						{ padding:5px 20px; }
+table.pestanas td.pestana_on			{ background-color:#FAFAFA; }
+table.pestanas td.pestana_on,
+table.pestanas td.pestana_on a,
+table.pestanas td.pestana_on a:hover	{ font-size:14px; color:#333; }
+table.pestanas td.pestana_off,
+table.pestanas td.pestana_off a,
+table.pestanas td.pestana_off a:hover	{ font-size:14px; color:#DC051A; }
+table.pestanas td.detalle				{ font-size:11px; color:#6A666A; padding-top:10px; }
+
+div.componente					{ }
+div.componente h1				{ margin:0px; color:#DC0519; font-size:20px; font-weight:normal; }
+div.componente h2				{ margin:0px; color:#1C9FBD; font-size:14px; font-weight:normal; }
+div.componente div.descripcion	{ background-color:#169CBB; background-image:url(../imagenes/box_descripcion_contendio_bottom.jpg); background-repeat:no-repeat; background-position:bottom; padding:10px 5px 26px 5px; color:#FFF; font-size:12px; margin-top:30px; background:url(../imagenes/box_descripcion_contendio_top.jpg) no-repeat top; }
+div.componente div.margen		{ margin-top:10px; }
+
+table.com_do_personas				{ }
+table.com_do_personas thead th		{ text-align:left; color:#333; font-size:12px; padding-left:4px; }
+table.com_do_personas tbody td		{ border-bottom:1px solid #999; height:24px; text-align:left; border-left:1px dashed #CCC; color:#333; font-size:10px; padding-left:4px; }
+
+div.componente div.personas_display	{ background-image:url(../imagenes/mod_personas_bg.jpg); background-repeat:no-repeat; background-position:bottom left; width:400px; }
+
+div.personas_popup_box				{ position:absolute; z-index:2001; padding:20px; text-align:center; display:none; background-color:#FFF; border:1px solid #CCC; }
+
+div.componente div.cumpleanos						{ overflow:hidden; width:710px; padding-top:15px; }
+div.componente div.cumpleanos div.pestanas			{ width:710px; overflow:hidden; }
+div.componente div.cumpleanos div.pestana			{ float:left; width:200px; overflow:hidden; }
+div.componente div.cumpleanos div.pestana a			{ font-size:14px; color:#DC051A; text-decoration:none; }
+div.componente div.cumpleanos div.pestana a:hover	{ font-size:14px; color:#DC051A; text-decoration:underline; }
+div.componente div.cumpleanos div.contenido			{ background-color:#FAFAFA; height:300px; overflow:hidden; }
+div.componente div.cumpleanos div.contenido_scroll	{ padding-left:30px; }
+div.componente div.cumpleanos div.flechas			{ background-color:#FAFAFA; padding:30px 0px 5px 0px; }
+
+table.cumpleanos td									{ border-bottom:1px dotted #CCC; padding:8px 0px; }
+table.cumpleanos td div.titulo,
+table.cumpleanos td div.titulo a,
+table.cumpleanos td div.titulo a:hover				{ color:#333; font-size:15px; }
+table.cumpleanos td div.bajada						{ color:#7F7D7F; font-size:14px; }
+/*
+div.reconocimientos									{ color:#666; font-size:12px; }
+div.reconocimientos	div.diploma_nombre				{ position:absolute; top:525px; left:280px; font-size:18px; font-weight:bold; }
+div.reconocimientos	div.diploma_motivo				{ position:absolute; top:645px; left:280px; font-size:15px; font-weight:bold; }
+div.reconocimientos	div.diploma_jefe				{ position:absolute; top:770px; left:532px; width:400px; font-size:14px; text-align:center; }
+div.reconocimientos	div.diploma_nombre_impresion	{ position:absolute; top:430px; left:280px; font-size:18px; font-weight:bold; }
+div.reconocimientos	div.diploma_motivo_impresion	{ position:absolute; top:550px; left:280px; font-size:15px; font-weight:bold; }
+div.reconocimientos	div.diploma_jefe_impresion		{ position:absolute; top:675px; left:532px; width:400px; font-size:14px; text-align:center; }
+*/
+
+div.reconocimientos									{ color:#666; font-size:12px; }
+div.reconocimientos	ul.servicios					{ /*margin:px; padding:0px;*/ }
+div.reconocimientos	ul.servicios li					{ }
+div.reconocimientos	ul.servicios li a,
+div.reconocimientos	ul.servicios li a:hover			{ font-size:12px; color:#666; }
+div.reconocimientos	ul.servicios li a.activo		{ color:#DC0519; }
+table.diploma										{ /*position:absolute;*/ }
+div.reconocimientos	div.diploma_nombre				{ position:relative; top:480px; left:70px; font-size:18px; font-weight:bold; }
+div.reconocimientos	div.diploma_motivo				{ position:relative; top:580px; left:70px; font-size:15px; font-weight:bold; }
+div.reconocimientos	div.diploma_jefe				{ position:relative; top:690px; left:322px; width:400px; font-size:14px; text-align:center; }
+div.reconocimientos	div.diploma_nombre_impresion	{ position:relative; top:480px; left:70px; font-size:18px; font-weight:bold; }
+div.reconocimientos	div.diploma_motivo_impresion	{ position:relative; top:580px; left:70px; font-size:15px; font-weight:bold; }
+div.reconocimientos	div.diploma_jefe_impresion		{ position:relative; top:690px; left:322px; width:400px; font-size:14px; text-align:center; }
+
+div.com_xmap,
+div.com_xmap a,
+div.com_xmap a:hover		{ font-size:10px; color:#666; }
+div.com_xmap h1				{ padding-bottom:20px; }
+div.com_xmap h2				{ padding-top:10px; }
+
+div.box_descripcion			{ background-color:#169CBB; background-image:url(../imagenes/box_descripcion_contendio_top.jpg); background-repeat:no-repeat; background-position:top; padding:5px; color:#FFF; font-size:12px; margin-top:20px; overflow:hidden; }
+div.box_descripcion_bottom	{ background-image:url(../imagenes/box_descripcion_contendio_bottom.jpg); background-repeat:no-repeat; background-position:bottom; }
+
+div.com_content				{ }
+div.seccion					{ }
+div.seccion h1				{ margin:0px; color:#DC0519; font-size:20px; font-weight:normal; }
+div.seccion div.descripcion	{ background-color:#169CBB; background-image:url(../imagenes/box_descripcion_contendio_bottom.jpg); background-repeat:no-repeat; background-position:bottom; padding:10px 5px 26px 5px; color:#FFF; font-size:12px; margin-top:30px; }
+div.seccion div.descripcion div.bg_top	{ background-image:url(../imagenes/box_descripcion_contendio_top.jpg); background-repeat:no-repeat; background-position:top; height:6px; }
+
+div.seccion div.categorias	{ margin-top:10px; }
+
+div.categoria h1				{ margin:0px; color:#DC0519; font-size:20px; font-weight:normal; }
+div.categoria div.descripcion	{ background-color:#169CBB; background-image:url(../imagenes/box_descripcion_contendio_bottom.jpg); background-repeat:no-repeat; background-position:bottom; padding:10px 5px 26px 5px; color:#FFF; font-size:12px; margin-top:30px; overflow:hidden; }
+div.categoria div.items			{ /*margin-top:10px;*/ }
+div.categoria div.items div.item{ padding-top:20px; border-bottom:1px dotted #CCC; }
+div.categoria div.items div.item span.titulo		{}
+div.categoria div.items div.item span.titulo a,
+div.categoria div.items div.item span.titulo a:hover{ color:#DC051A; font-size:11px; font-weight:bold; }
+div.categoria div.items div.item span.fecha			{ margin-left:10px; color:#666; font-size:11px; font-weight:bold; }
+div.categoria div.items div.item div.introtext		{ color:#666; font-size:11px; padding:10px 0px 20px 0px; }
+div.categoria div.items div.item div.introtext p	{ margin:0px; }
+
+div.categoria div.itemsgal				{ overflow:hidden; }
+div.categoria div.itemsgal div.spacer	{ overflow:hidden; padding-top:10px; width:710px; }
+div.categoria div.itemsgal div.itemizq	{ width:163px; float:left; text-align:left; }
+div.categoria div.itemsgal div.itemder	{ width:163px; float:left; text-align:left; border-left:1px dotted #CCC; }
+div.categoria div.itemsgal div.itemcen	{ width:190px; float:left; text-align:left; border-left:1px dotted #CCC; }
+div.categoria div.itemsgal img					{ display:block; }
+div.categoria div.itemsgal span.titulo			{ display:block; padding-left:35px; }
+div.categoria div.itemsgal div.titulo	{ display:block; padding-left:35px; }
+div.categoria div.itemsgal div.titulo a,
+div.categoria div.itemsgal div.titulo a:hover	{ color:#333; font-size:12px; }
+div.categoria div.itemsgal span.titulo a,
+div.categoria div.itemsgal span.titulo a:hover	{ color:#333; font-size:12px; }
+div.categoria div.itemsgal div.introtext		{ color:#7F7D7F; font-size:11px; padding-left:35px; }
+div.categoria div.itemsgal div.itemizq span.titulo,
+div.categoria div.itemsgal div.itemizq div.titulo,
+div.categoria div.itemsgal div.itemizq div.introtext	{ padding:0px; }
+
+table.itemsgal				{ font-size:12px; }
+table.itemsgal a,
+table.itemsgal a:hover		{ color:#333; font-size:12px; }
+table.itemsgal td.titulo	{ padding-left:32px; }
+table.itemsgal td.intro		{ color:#7F7D7F; font-size:11px; padding-left:35px; padding-top:8px; }
+div.itemsgal div.itemizq table.itemsgal td.titulo,
+div.itemsgal div.itemizq table.itemsgal td.intro	{ padding-left:0px; }
+div.itemsgal div.itemder table.itemsgal td.titulo,
+div.itemsgal div.itemder table.itemsgal td.intro	{ padding-left:38px; }
+
+
+
+div.articulo h1					{ margin:0px; color:#DC0519; font-size:20px; font-weight:normal; }
+div.articulo div.descripcion	{ background-color:#169CBB; background-image:url(../imagenes/box_descripcion_contendio_bottom.jpg); background-repeat:no-repeat; background-position:bottom; padding:10px 5px 26px 5px; color:#FFF; font-size:12px; margin-top:30px; overflow:hidden; }
+div.articulo div.detalle		{ margin-top:10px; font-size:11px; color:#666; }
+
+table.com_content_section_cats				{ }
+table.com_content_section_cats h2,
+table.com_content_section_cats h2.off		{ font-size:12px; color:#333; margin:0px; }
+table.com_content_section_cats h2.activo	{ margin:0px; color:#DC051B; font-size:12px; }
+/*
+table.com_content_section_cats ul			{ margin:20px 0px 0px 0px; list-style:none; padding:0px; }
+table.com_content_section_cats li			{ margin:0px; padding:0px; }
+*/
+table.com_content_section_cats ul			{ margin:20px 0px 0px 0px; padding:0px 0px 0px 15px; list-style-image:url(../imagenes/icono_flecha.jpg); }
+table.com_content_section_cats li			{ margin:0px; padding:0px; }
+table.com_content_section_cats,
+table.com_content_section_cats a,
+table.com_content_section_cats a:hover		{ font-size:11px; color:#666; }
+table.com_content_section_cats a.activo		{ font-size:11px; color:#DC051B; }
+
+div.quienessomos h2					{ margin:20px 0px 0px 0px; padding:0px; color:#169CBB; font-size:15px; }
+div.quienessomos h2.dos				{ margin:20px 0px 0px 0px; padding:0px; color:#DC051A; font-size:15px; }
+/*div.quienessomos div.box_descripcion{ padding:5px 5px 15px 5px; }*/
+div.quienessomos div.organigrama	{ /*padding-top:20px;*/ }
+table.organigrama					{ font-size:11px; color:#666; }
+table.organigrama td				{ padding-top:30px; }
+table.organigrama td a,
+table.organigrama td a:hover		{ font-size:13px; color:#333; font-weight:bold; }
+
+div.mod_autoconsulta				{ background-image:url(../imagenes/mod_autoconsulta_bg.jpg); background-repeat:repeat-y; width:204px; /*background-color:#DAEFF4; border:1px solid #F7F7F7; width:202px; padding:10px 5px;*/ overflow:hidden; margin-top:30px; }
+div.mod_autoconsulta .tit			{ font-size:13px; color:#169CBB; }
+div.mod_autoconsulta .txt			{ font-size:11px; color:#666; padding:8px 0px; }
+div.mod_autoconsulta .link			{ padding-right:20px; }
+div.mod_autoconsulta .link a,
+div.mod_autoconsulta .link a:hover	{ font-size:11px; color:#333; }
+
+div.mod_formulario					{ background-image:url(../imagenes/mod_formulario_bg.jpg); background-repeat:repeat-y; width:204px; overflow:hidden; margin-top:30px; }
+div.mod_formulario .tit				{ font-size:13px; color:#169CBB; }
+div.mod_formulario .txt				{ font-size:11px; color:#666; padding:8px 0px; }
+div.mod_formulario .link			{ padding-right:20px; }
+div.mod_formulario .link a,
+div.mod_formulario .link a:hover	{ font-size:11px; color:#333; }
+
+div.mod_categorias,
+div.mod_categorias div.pestanas			{ width:710px; overflow:hidden; }
+div.mod_categorias div.pestana			{ float:left; width:200px; overflow:hidden; }
+div.mod_categorias div.pestana a		{ font-size:14px; color:#DC051A; text-decoration:none; }
+div.mod_categorias div.pestana a:hover	{ font-size:14px; color:#DC051A; text-decoration:underline; }
+div.mod_categorias div.articulos		{ background-color:#FAFAFA; font-size:11px; color:#6A666A; padding:10px; overflow:hidden; }
+div.mod_categorias div.articulos a,
+div.mod_categorias div.articulos a:hover	{ color:#169CBB; font-size:11px; }
+
+table.articulos	td						{ padding-top:15px; }
+table.articulos	h3						{ margin:0px; padding:0px; font-size:13px; color:#333; }
+table.articulos	div.descripcion			{ font-size:11px; color:#6A666A; }
+table.articulos	div.descripcion p		{ margin:0px; padding:0px; }
+
+div.mod_pie							{ width:944px; overflow:hidden; padding:20px 0px; }
+div.mod_pie div.logo				{ float:left; width:140px; margin-left:10px; }
+div.mod_pie div.logo a				{}
+div.mod_pie div.central				{}
+div.mod_pie div.central	div.texto	{}
+div.mod_pie div.central	div.modulo	{}
+div.mod_pie div.lateral				{}
+div.mod_pie div.lateral	div.texto	{}
+
+table.mod_pie							{ color:#FFF; }
+table.mod_pie td.logo					{ width:150px; padding:10px; }
+table.mod_pie td.central				{ width:auto; padding:5px 0px 0px /*70*/8px; }
+table.mod_pie td.central div.texto		{ font-size:8px; }
+table.mod_pie td.central div.modulo		{ padding-top:10px; }
+table.mod_pie td.central div.modulo div.menu,
+table.mod_pie td.central div.modulo div.menu a,
+table.mod_pie td.central div.modulo div.menu a:hover	{ font-size:8px; color:#FFF;  }
+table.mod_pie td.lateral				{ width:150px; padding:5px 0px 10px 10px; font-size:10px; }
+table.lateral							{ color:#FFF; font-size:10px; }
+
+div.mod_boxshome					{ float:left; width:315px; padding-top:15px; }
+div.mod_boxshome h1					{ color:#DC051A; /*color:#F28635;*/ font-size:15px; margin:0px; padding:2px 0px 0px 0px; font-weight:normal; }
+div.mod_boxshome h2					{ color:#333; font-size:12px; margin:0px; padding:0px; font-weight:normal; }
+
+div.mod_personas					{ background-image:url(../imagenes/boxs_home_bg.jpg); background-repeat:no-repeat; height:215px; }
+div.mod_personas h1					{ padding-left:10px; }
+div.mod_personas h2					{ padding-left:10px; }
+div.mod_personas div.form			{ padding:5px 50px 10px /*0px*/10px; height:156px; background-image:url(../imagenes/mod_personas_bg.jpg); background-repeat:no-repeat; background-position:bottom left; margin-left:4px; }
+div.mod_personas div.form div.sep	{ margin-top:5px; }
+
+div.mod_cumple						{ background-image:url(../imagenes/boxs_home_bg.jpg); background-repeat:no-repeat; height:230px; }
+div.mod_cumple h1					{ padding-left:10px; }
+div.mod_cumple h2					{ padding-left:10px; }
+div.mod_cumple div.lista			{ padding:10px 15px 0px /*0px*/10px; width:259px; font-size:11px; color:#333; }
+div.mod_cumple div.lista span		{ font-weight:bold; }
+table.mod_cumple_lista				{ padding-top:2px; }
+table.mod_cumple_lista,
+table.mod_cumple_lista a,
+table.mod_cumple_lista a:hover		{ font-size:11px; color:#666; }
+div.mod_cumple div.lista div.con_listado	{ overflow:hidden; height:60px; }
+div.mod_cumple div.lista div.listado		{ /*overflow:hidden;*/  }
+div.mod_cumple div.flechas			{ padding-left:100px; }
+div.mod_cumple div.form				{ padding:30px 0px 10px /*0px*/10px; width:190px; }
+div.mod_cumple div.form h3			{ font-size:11px; color:#1C9FBD; font-weight:normal; margin:0px; padding:0px; }
+div.mod_cumple div.form div.margen	{ padding-top:5px; }
+
+div.mod_docs							{ background-image:url(../imagenes/boxs_home_bg.jpg); background-repeat:no-repeat; height:230px; }
+div.mod_docs h1							{ padding-left:10px; }
+div.mod_docs h2							{ padding-left:10px; }
+div.mod_docs div.items					{ padding:/*55*/15px /*20*/60px 0px 30px; }
+div.mod_docs div.items div.item			{ border-bottom:1px dotted #7D7D7D; background-image:url(../imagenes/mod_docs_link.gif); background-position:left; background-repeat:no-repeat; padding:5px 5px 5px 25px; }
+div.mod_docs div.items div.item a,
+div.mod_docs div.items div.item a:hover	{ font-size:11px; color:#666; }
+
+div.mod_reconocimientos						{ background-image:url(../imagenes/boxs_home_bg_niv_2.jpg); height:230px; background-position:top left; background-repeat:no-repeat; }
+div.mod_reconocimientos h1					{ padding-left:10px; }
+div.mod_reconocimientos h2					{ padding-left:10px; }
+div.mod_reconocimientos						{ padding:15px 0px 15px 0px; }
+div.mod_reconocimientos div.ultimos			{ padding:10px 40px 0px 10px; overflow:hidden; }
+div.mod_reconocimientos div.ultimo			{ /*float:left; width:90px;*/ margin-left:10px; }
+div.mod_reconocimientos span.titulo			{ display:block; color:#333; font-weight:bold; font-size:10px; padding:6px 0px 0px 0px; }
+div.mod_reconocimientos span.titulo a,
+div.mod_reconocimientos span.titulo a:hover	{ font-size:10px; color:#333; font-weight:bold; }
+div.mod_reconocimientos span.descripcion	{ display:block; color:#666; font-size:9px; padding:5px 0px 0px 0px; }
+div.mod_reconocimientos div.botonera		{ padding-top:8px; }
+table.mod_reconocimientos a,
+table.mod_reconocimientos a:hover			{ color:#333; font-size:12px; }
+div.mod_reconocimientos div.box				{ width:130px; height:30px; line-height:30px; background-image:url(../imagenes/mod_reconocimientos_box_bg.jpg); background-repeat:no-repeat; color:#666; font-size:10px; text-align:center; }
+div.mod_reconocimientos div.box	a,
+div.mod_reconocimientos div.box	a:hover		{ color:#666; font-size:10px; }
+
+div.mod_galeria							{ background-image:url(../imagenes/boxs_home_bg_niv_2.jpg); height:230px; background-position:top left; background-repeat:no-repeat; }
+div.mod_galeria							{ /*width:300px; padding-left:15px;*/ }
+div.mod_galeria h1						{ /*color:#F28635;*/ }
+div.mod_galeria h1						{ padding-left:10px; }
+div.mod_galeria h2						{ padding-left:10px; }
+div.mod_galeria div.noticia				{ padding:15px 40px 0px 10px; }
+table.mod_galeria						{}
+table.mod_galeria td div.titulo,
+table.mod_galeria td div.titulo a,
+table.mod_galeria td div.titulo a:hover	{ color:#9F9F9F; font-size:10px; font-weight:bold; }
+table.mod_galeria td div.titulo			{ padding-top:10px; }
+table.mod_galeria td div.fecha			{ color:#9F9F9F; font-size:8px; padding-top:5px; }
+table.mod_galeria td div.descripcion	{ font-size:11px; color:#666; }
+table.mod_galeria td div.detalle		{ font-size:11px; color:#000; padding-top:10px; }
+/*table.mod_galeria td div.link a,
+table.mod_galeria td div.link a:hover	{color:#9F9F9F; font-size:10px; font-weight:bold; }*/
+
+div.mod_noticias						{ background-image:url(../imagenes/boxs_home_bg_niv_2.jpg); height:230px; background-position:top left; background-repeat:no-repeat; }
+div.mod_noticias						{ /*width:300px; padding-left:15px;*/ }
+div.mod_noticias h1						{ /*color:#F28635;*/ }
+div.mod_noticias h1						{ padding-left:10px; }
+div.mod_noticias h2						{ padding-left:10px; }
+div.mod_noticias div.noticia			{ padding:10px 40px 0px 10px; }
+table.mod_noticias						{}
+table.mod_noticias td div.titulo,
+table.mod_noticias td div.titulo a,
+table.mod_noticias td div.titulo a:hover{ color:#9F9F9F; font-size:10px; font-weight:bold; }
+table.mod_noticias td div.titulo		{ padding-top:10px; }
+table.mod_noticias td div.fecha			{ color:#9F9F9F; font-size:8px; padding-top:5px; }
+table.mod_noticias td div.descripcion	{ font-size:11px; color:#000; }
+table.mod_noticias td div.detalle		{ font-size:11px; color:#666; padding-top:10px; }
+
+div.mod_chat							{ width:170px; float:right; overflow:hidden; padding:10px 0px; }
+div.mod_chat div.lista					{ position:absolute; z-index:999; height:300px; /*top:50px;*/ width:250px; display:none; overflow:scroll; background-color:#FFF; border:1px solid #CCC; }
+div.mod_chat div.lista div.listado		{ height:260px; }
+div.mod_chat div.lista div.buscador		{ height:20px; padding:0px 0px 0px 5px; }
+div.mod_chat div.lista ul				{ list-style:none; margin:0px; padding:0px; }
+div.mod_chat div.lista ul li			{ background-image:url(../imagenes/mod_chat_icono.gif); background-position:left; background-repeat:no-repeat; margin:0px; padding:5px 0px 5px 30px; }
+div.mod_chat div.lista ul li:hover		{ background-color:#EEE; }
+div.mod_chat div.lista ul li a,
+div.mod_chat div.lista ul li a:hover	{ color:#666; font-size:12px; }
+div.mod_chat div.lista ul li a:hover	{ text-decoration:none; }
+
+div.chat					{ position:absolute; z-index:999; height:300px; /*top:50px;*/ width:250px; display:none; overflow:scroll; background-color:#FFF; border:1px solid #CCC; }
+div.chat div.listado		{ height:260px; }
+div.chat div.buscador		{ height:20px; padding:0px 0px 0px 5px; }
+div.chat ul					{ list-style:none; margin:0px; padding:0px; }
+div.chat ul li				{ background-image:url(../imagenes/mod_chat_icono.gif); background-position:left; background-repeat:no-repeat; margin:0px; }
+/*div.chat ul li:hover		{ background-color:#EEE; }*/
+div.chat ul li a			{ display:block; /*width:270px; height:100%;*/ padding:8px 0px 8px 30px; }
+div.chat ul li a,
+div.chat ul li a:hover		{ color:#666; font-size:12px; }
+div.chat ul li a:hover		{ text-decoration:none; /*background-color:#EEE;*/ }
+
+div.mod_faq								{ /*padding-bottom:10px;*/ }
+div.mod_faq span.titulo,
+div.mod_faq span.titulo a,
+div.mod_faq span.titulo a:hover			{ font-size:13px; color:#333; }
+div.mod_faq span.link					{ border-left:1px dotted #CCC; padding-left:5px; }
+div.mod_faq span.link,
+div.mod_faq span.link a,
+div.mod_faq span.link a:hover			{ color:#2F93A9; font-size:13px; }
+div.mod_faq div.huincha					{ padding-top:10px; height:36px; }
+div.mod_faq div.huincha	div.items					{ float:left; width:888px; overflow:hidden; }
+div.mod_faq div.huincha	div.items div.item			{ float:left; width:888px; height:36px; /*line-height:25px;*/ }
+div.mod_faq div.huincha	div.items div.item span.categoria	{ font-size:12px; color:#DC051A; text-align:left; }
+div.mod_faq div.huincha	div.items div.item a,
+div.mod_faq div.huincha	div.items div.item a:hover	{ color:#666; font-size:13px; height:28px; }
+
+/*
+table.faq td							{ border-left:1px dotted #CCC; padding-left:20px; }
+table.faq td,
+table.faq td a,
+table.faq td a:hover					{ color:#666; font-size:11px; height:28px; }
+*/
+
+img		{ border:0px; }
+
+.inputbox				{ border:1px solid #DEDEDE; font-size:10px; color:#666; height:18px; }
+.inputbox_text1			{ border:1px solid #FFF; font-size:12px; height:30px; color:#666; /*line-height:30px;*/ }
+.inputbox_area			{ background-color:#FAFAFA; font-size:10px; color:#666; }
+
+.button_1				{ width:105px; text-align:center; font-size:12px; color:#FFF; background-image:url(../imagenes/btn_bg_1.jpg); background-repeat:no-repeat; height:26px; line-height:26px; border:0px; padding-bottom:4px; }
+.button_2				{ background-image:url(../imagenes/btn_bg_2.jpg); background-repeat:no-repeat; width:250px; text-align:center; height:25px; border:0px; font-size:11px; color:#666; }
+
+div.formulario div.msg				{ padding:8px; text-align:center; color:#DC051A; font-size:12px; font-weight:bold; }
+div.formulario div.texto1			{ color:#DC051A; font-size:12px; font-weight:bold; }
+div.formulario div.fondo			{ background-color:#D0EBF1; }
+div.formulario div.margen			{ margin-top:20px; }
+
+
+div.frmcontacto	div.caja1			{ padding-bottom:20px; }
+div.frmcontacto	div.fondo			{ padding:20px 30px 30px 30px; }
+div.frmcontacto table.frmcontacto	{ color:#1189A4; font-weight:bold; font-size:11px; }
+div.frmcontacto table.frmcontacto td			{ padding-top:5px; }
+/*dif.frmcontacto table.frmcontacto div.radio	{ float:left; width:110px; background-color:#ABDBE6; margin-right:60px; }*/
+
+div.frmcursos div.fondo				{ padding:20px 30px 30px 30px; }
+div.frmcursos h2					{ font-size:12px; color:#666; }
+div.frmcursos table					{ font-size:11px; color:#666; }
+
+a.pagenav							{ color:#333; /*text-decoration:underline;*/ }
+a.pagenav:hover						{ /*text-decoration:none;*/ }

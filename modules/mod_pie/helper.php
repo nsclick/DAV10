@@ -38,12 +38,32 @@ class modPieHelper
 		$datos->link			= JRoute::_( $menu->link."&Itemid=$menu->id" );
 		$datos->titulo			= $menu->name;
 		
-		if( $params->get('modulo',0) ) :
-			$datos->modulo		= $params->get('modulo',0);
-			$datos->text		= '{loadposition mod_pie}';
-			$results			= $dispatcher->trigger('onPrepareContent', array (& $datos, $params, 0));
-		endif;
+		// if( $params->get('modulo',0) ) :
+		// 	$datos->modulo		= $params->get('modulo',0);
+		// 	$datos->text		= '{loadposition mod_pie}';
+		// 	$results			= $dispatcher->trigger('onPrepareContent', array (& $datos, $params, 0));
+		// endif;
 		
+		/**
+		 * Fix by NSClick, load of modules in 'mod_pie' position.
+		 * Author: 	Luis Carlos Osorio Jayk
+		 * Company:	NSCLICK
+		 * Date: 	02-04-2014
+		 */
+		if ( $params->get ( 'modulo', 0 ) ) {
+			$document	= &JFactory::getDocument();
+			$renderer	= $document->loadRenderer ( 'module' );
+			$styles		= array ( 'style' => -2 );
+
+			$contents = '';
+			foreach ( JModuleHelper::getModules( 'mod_pie') as $mod )  {
+				$contents .= $renderer->render( $mod, $styles );
+			}
+			
+			$datos->modulo 	= $params->get ( 'modulo', 0 );
+			$datos->text 	= $contents;
+		}
+
 		if( $params->get('icono','') ) :
 			$icono				= JPATH_BASE.DS.'images'.DS.'boxs'.DS.$params->get('icono','');
 			if( file_exists( $icono ) ) :
@@ -52,5 +72,6 @@ class modPieHelper
 		endif;
 		
 		return $datos;
-	}	
+	}
+
 }

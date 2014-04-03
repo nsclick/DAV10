@@ -35,22 +35,6 @@ class DOOracle extends JTable
 		
 		$session		=& JFactory::getSession();
 		
-		//TODO Remove this oracle hardcoded login
-		 $session->set( 'DO_oci8_link', @oci_connect("INTRANET",  "INTRA", "(DESCRIPTION=
-			(FAILOVER=on)
-			(LOAD_BALANCE=yes)
-			(ADDRESS_LIST=
-				(ADDRESS=(PROTOCOL=TCP)(HOST=172.31.2.237)(PORT=1521))
-				(ADDRESS=(PROTOCOL=TCP)(HOST=172.31.2.237)(PORT=1521))
-			)
-			(CONNECT_DATA=
-				(FAILOVER_MODE=(TYPE=select)(METHOD=basic))
-				(SERVICE_NAME=dav_web)
-			)
-		)", "AL32UTF8") );
-		
-		
-		
 		$DO_oci8_link	=& $session->get( 'DO_oci8_link', null );
 		if( $DO_oci8_link && is_resource( $DO_oci8_link ) ) :
 			$this->_link = $DO_oci8_link;

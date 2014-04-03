@@ -7,7 +7,7 @@ defined('_JEXEC') or die('Restricted access');
 		$primero	= $datos->rows[0];
 		$segundo	= $datos->rows[1];
 ?>
-<div class="mod_boxshome mod_reconocimientos" style="width:314px;" align="left">
+<div class="mod_boxshome mod_reconocimientos" style="width:277px; height: 230px;" align="left">
 	<h2><?php echo $datos->subtitulo;?></h2>
 	<h1><?php echo $datos->titulo;?></h1>
     <div class="ultimos">

@@ -38,7 +38,7 @@ class DOControllerCumpleanos extends JController
 
 	function display() 
 	{ 
-		ob_start();
+		//ob_start();
 		global $mainframe, $Itemid;
 		
 		$app					=& JFactory::getApplication();
@@ -46,7 +46,7 @@ class DOControllerCumpleanos extends JController
 		$app					=& JFactory::getApplication();
 		$doc					=& JFactory::getDocument();
 		$oracle					=& JTable::getInstance('oracle', 'DO');
-		
+
 		$lists					= array();
 		$filtro					= new stdClass;
 		$filtro->cumplemes		= date('m');
@@ -85,7 +85,7 @@ class DOControllerCumpleanos extends JController
 		//$doc->addScript( 'components/com_do/includes/js/cumpleanos.js' );
 		
 		require_once(JPATH_COMPONENT.DS.'vistas'.DS.'cumpleanos.php');
-		ob_end_clean();
+		//ob_end_clean();
 		DoVistaCumpleanos::display( $rows, $lista, $lists );
 	}
 

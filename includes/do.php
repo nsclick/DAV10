@@ -25,13 +25,39 @@
 	define( '_DO_LOGIN_BANMEDICA', true );
 	define( '_DO_LOGIN_BANMEDICA_REDIRECT', true );
 	define( '_DO_LOGIN_JOOMLA', true );
-	define( '_DO_LOGIN_FORM', 'login_new.php'  );
+	define( '_DO_LOGIN_FORM', 'login.php'  );
 	define( '_DO_LOGIN_URL', 'http://banmeta4web.banmedica.cl/cdavila/verificar_pregunta_intranet.asp' );
 	define( '_DO_LOGIN_OFFLINE', 'Estimado Usuario, por problemas técnicos, el servicio del Portal Dávila se encuentra suspendido.<br />Esperamos que esto se solucione pronto. Agradecemos su comprensión.' );
 	define( '_DO_FOTOS_BASE', JURI::base().'images/fotos/' );
 	define( '_DO_ANALYTICS', true );
 	
 	$session	=& JFactory::getSession();
+
+	/**
+	 * Include DO table folder path
+	 */
+	JTable::addIncludePath( JPATH_ADMINISTRATOR . DS . 'components'. DS . 'com_do' . DS . 'tablas' );
+
+	/**
+	 * Set DO_oci8_link variable in Session
+	 */
+	  $session->set( 'DO_oci8_link', @oci_connect("INTRANET",  "INTRA", "(DESCRIPTION=
+	    (FAILOVER=on)
+	    (LOAD_BALANCE=yes)
+	    (ADDRESS_LIST=
+	    (ADDRESS=(PROTOCOL=TCP)(HOST=172.31.2.237)(PORT=1521))
+	    (ADDRESS=(PROTOCOL=TCP)(HOST=172.31.2.237)(PORT=1521))
+	    )
+	    (CONNECT_DATA=
+	    (FAILOVER_MODE=(TYPE=select)(METHOD=basic))
+	    (SERVICE_NAME=dav_web)
+	    )
+	  )", "AL32UTF8") );
+
+	/**
+	 * Set Language
+	 */
+	  setlocale(LC_ALL, 'es_ES','es_ES.utf8','spanish');
 	
 	JTable::addIncludePath( JPATH_ADMINISTRATOR.DS.'components'.DS.'com_do'.DS.'tablas' );
 	//$session->set( 'DO_oci8_link', @oci_connect("INTRANET",  "INTRA", "DAVILA_INTRA", "AL32UTF8") );
